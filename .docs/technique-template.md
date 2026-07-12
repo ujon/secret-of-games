@@ -3,6 +3,7 @@ type: Technique
 title: <Technique name>
 description: <One-line summary of what the trick does and when to use it.>
 tags: [<topic>, <tag>]
+dimensions: [<2d, 3d — where the technique applies; one or both>]
 status: draft
 model: <model id that wrote this page, e.g. claude-fable-5>
 timestamp: <YYYY-MM-DDThh:mm:ssZ>
@@ -44,4 +45,4 @@ fenced code blocks — over prose.>
 
 # Citations
 
-1. [<Source>](registry/sources/<slug>.yaml) - the source record this draws on (or an external URL).
+1. [<Source title> — <channel/author>, <year>](<url>) - what this page draws from.

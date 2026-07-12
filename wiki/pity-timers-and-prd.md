@@ -3,7 +3,8 @@ type: Technique
 title: Pity Timers and PRD
 description: Bound bad luck — guarantee drops after enough misses, shuffle outcomes in bags, or bend per-try odds with pseudo-random distribution.
 tags: [design, probability, gacha]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -44,4 +45,4 @@ Constrain randomness so the worst cases can't occur:
 
 # Citations
 
-1. [불운을 관리하는 게임의 확률 조작법 — 저세상개발자](https://www.youtube.com/shorts/eyrRduWl-qo) - the short this page is drawn from ([source record](registry/sources/yt-short-luck-management.yaml)).
+1. [불운을 관리하는 게임의 확률 조작법 — 저세상개발자, 2026](https://www.youtube.com/shorts/eyrRduWl-qo) - the short this page is drawn from.

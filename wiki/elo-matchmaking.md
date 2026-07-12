@@ -3,7 +3,8 @@ type: Technique
 title: Elo Matchmaking
 description: Predict win probability from rating gaps and transfer points by surprise, so matchmakers can pair players of equal skill.
 tags: [design, matchmaking, online, math]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -48,4 +49,4 @@ Modern refinements:
 
 # Citations
 
-1. [게임 상대를 결정하는 매칭 시스템의 원리 — 저세상개발자](https://www.youtube.com/shorts/uMCwH38GpuY) - the short this page is drawn from ([source record](registry/sources/yt-short-elo-matchmaking.yaml)).
+1. [게임 상대를 결정하는 매칭 시스템의 원리 — 저세상개발자, 2026](https://www.youtube.com/shorts/uMCwH38GpuY) - the short this page is drawn from.

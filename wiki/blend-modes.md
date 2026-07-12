@@ -3,7 +3,8 @@ type: Technique
 title: Blend Modes
 description: Compose effects with color arithmetic — add for light and glow, multiply for shadow and tint, screen and alpha for the rest.
 tags: [graphics, shaders, blending]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -45,4 +46,4 @@ arithmetic per effect:
 
 # Citations
 
-1. [게임 이펙트를 만드는 신기한 색상 계산 — 저세상개발자](https://www.youtube.com/shorts/Of9pFtvVBJQ) - the short this page is drawn from ([source record](registry/sources/yt-short-blend-modes.yaml)).
+1. [게임 이펙트를 만드는 신기한 색상 계산 — 저세상개발자, 2026](https://www.youtube.com/shorts/Of9pFtvVBJQ) - the short this page is drawn from.

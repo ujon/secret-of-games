@@ -37,8 +37,17 @@ for (const file of walkMarkdown(REPO_ROOT, { skip })) {
   // Concept or meta document.
   if (!hasBlock) errors.push(`${path}: missing YAML frontmatter block.`);
   else if (!data?.type) errors.push(`${path}: frontmatter is missing a non-empty \`type\`.`);
-  else if (path.startsWith('wiki/') && !data.model)
-    errors.push(`${path}: frontmatter is missing \`model\` (the model that wrote it).`);
+  else if (path.startsWith('wiki/')) {
+    if (!data.model)
+      errors.push(`${path}: frontmatter is missing \`model\` (the model that wrote it).`);
+    if (!data.dimensions) {
+      errors.push(`${path}: frontmatter is missing \`dimensions\` ([2d], [3d], or [2d, 3d]).`);
+    } else {
+      const dims = data.dimensions.replace(/^\[|\]$/g, '').split(',').map((s) => s.trim()).filter(Boolean);
+      if (dims.length === 0 || dims.some((d) => d !== '2d' && d !== '3d'))
+        errors.push(`${path}: \`dimensions\` must be [2d], [3d], or [2d, 3d] (got ${data.dimensions}).`);
+    }
+  }
 }
 
 report('OKF conformance', errors);

@@ -3,7 +3,8 @@ type: Technique
 title: Dynamic Difficulty Adjustment
 description: Quietly tune challenge to live performance — adaptive enemies, rubber-band racers, and mercy checkpoints — without telling the player.
 tags: [design, difficulty, game-feel]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -42,4 +43,4 @@ Measure performance and adjust in real time, invisibly:
 
 # Citations
 
-1. [플레이어에 접대하는 게임의 난이도 조절 — 저세상개발자](https://www.youtube.com/shorts/kkhqAHTcu5I) - the short this page is drawn from ([source record](registry/sources/yt-short-dynamic-difficulty.yaml)).
+1. [플레이어에 접대하는 게임의 난이도 조절 — 저세상개발자, 2026](https://www.youtube.com/shorts/kkhqAHTcu5I) - the short this page is drawn from.

@@ -2,6 +2,12 @@
 
 ## 2026-07-13
 
+- Every technique now declares where it applies in a `dimensions` field (`2d`, `3d`, or both), shown as a Dim column in the bundle map and enforced by the validators.
+- Captured the Perlin short's captions and verified the page against them (every video claim present; added the Minecraft example); promoted it to `stable` — no drafts remain.
+- Retired the source-record registry: with every source mapping 1:1 to a page and its summary duplicating the page, pages now cite sources directly (title, channel, year, URL) and reverse lookup is a grep; future media assets live under `wiki/assets/<page>/`.
+
+- The bundle map now catalogs techniques in a table (technique, description, tags), and the index validator enforces that the tag chips match each page's frontmatter.
+- Promoted the 30 caption-verified pages and their 32 source records to `stable` per the lifecycle criteria; only Perlin Noise Terrain (no transcript captured) remains `draft`.
 - Ingested the full 저세상개발자 shorts catalog (46 videos reviewed via auto-captions, 32 kept as game-development knowledge, 14 excluded as off-topic): 30 new technique pages, 32 source records, 34 new glossary terms, and verified engine-support entries for raycasting and billboarding. The Bézier short was folded into Easing Functions and the Rogue short into Procedural Dungeon Generation.
 
 - Added per-engine YAML registries (Unity, Unreal, Godot) tracking version support and doc links, with a validator.

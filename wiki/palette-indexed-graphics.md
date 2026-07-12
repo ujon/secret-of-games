@@ -3,7 +3,8 @@ type: Technique
 title: Palette-Indexed Graphics
 description: Store pixels as small palette indices instead of raw color — 4 bits per pixel, swappable palettes, and the source of retro color identity.
 tags: [optimization, classic, graphics]
-status: draft
+dimensions: [2d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -44,4 +45,4 @@ Exploit how few colors sprites actually use:
 
 # Citations
 
-1. [마른 이미지 용량 쥐어짜기 — 저세상개발자](https://www.youtube.com/shorts/p0mH7UAwtXQ) - the short this page is drawn from ([source record](registry/sources/yt-short-palette-graphics.yaml)).
+1. [마른 이미지 용량 쥐어짜기 — 저세상개발자, 2025](https://www.youtube.com/shorts/p0mH7UAwtXQ) - the short this page is drawn from.

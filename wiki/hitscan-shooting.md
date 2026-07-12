@@ -3,7 +3,8 @@ type: Technique
 title: Hitscan Shooting
 description: Judge shots with an instant ray instead of a simulated bullet — and fire that ray from the camera, not the muzzle, with a muzzle-blocked check.
 tags: [design, fps, hitscan]
-status: draft
+dimensions: [3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -42,4 +43,4 @@ worst at close range — so perfectly centered shots can miss.
 
 # Citations
 
-1. [눈에서 총알이 튀어나오는 FPS 게임의 사격 판정 — 저세상개발자](https://www.youtube.com/shorts/kucqGt8Q2a8) - the short this page is drawn from ([source record](registry/sources/yt-short-hitscan.yaml)).
+1. [눈에서 총알이 튀어나오는 FPS 게임의 사격 판정 — 저세상개발자, 2026](https://www.youtube.com/shorts/kucqGt8Q2a8) - the short this page is drawn from.

@@ -3,7 +3,8 @@ type: Technique
 title: Mode 7 Affine Transforms
 description: Fake 3D by affine-transforming a 2D tilemap per scanline — the Super Famicom trick behind Mario Kart's flat "tracks".
 tags: [graphics, classic, affine]
-status: draft
+dimensions: [2d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -48,4 +49,4 @@ paint, because the "track" is a picture.
 
 # Citations
 
-1. [3D처럼 눈속임하는 고전 게임의 비밀 — 저세상개발자](https://www.youtube.com/shorts/R06WXFSWYvo) - the short this page is drawn from ([source record](registry/sources/yt-short-mode7.yaml)).
+1. [3D처럼 눈속임하는 고전 게임의 비밀 — 저세상개발자, 2025](https://www.youtube.com/shorts/R06WXFSWYvo) - the short this page is drawn from.

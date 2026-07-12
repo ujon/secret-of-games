@@ -3,7 +3,8 @@ type: Technique
 title: Corner Correction
 description: Nudge characters around geometry corners they barely clip so jumps and dashes succeed instead of bonking.
 tags: [design, platformer, collision, game-feel]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -46,4 +47,4 @@ routes.
 
 # Citations
 
-1. [플랫폼 게임 맵 모서리에 있는 점프 위치 보정 — 저세상개발자](https://www.youtube.com/shorts/hjVLIojpwVk) - the short this page is drawn from ([source record](registry/sources/yt-short-corner-correction.yaml)).
+1. [플랫폼 게임 맵 모서리에 있는 점프 위치 보정 — 저세상개발자, 2026](https://www.youtube.com/shorts/hjVLIojpwVk) - the short this page is drawn from.

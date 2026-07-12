@@ -3,7 +3,8 @@ type: Technique
 title: Procedural Dungeon Generation
 description: Blend authored structure with randomness — guaranteed paths, room templates, graph growth, and Rogue's original grid-and-maze recipe.
 tags: [design, procedural-generation, roguelike]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -48,5 +49,5 @@ Ship the structure, randomize the flesh:
 
 # Citations
 
-1. [랜덤 생성 던전을 게임이 만드는 방법 — 저세상개발자](https://www.youtube.com/shorts/_0qjqwigjLc) - Spelunky, Dead Cells, and Isaac generation ([source record](registry/sources/yt-short-dungeon-generation.yaml)).
-2. [전설로 남은 게임의 랜덤맵 생성 — 저세상개발자](https://www.youtube.com/shorts/vVVyFUzs-HM) - Rogue's grid and maze algorithm ([source record](registry/sources/yt-short-rogue-map-gen.yaml)).
+1. [랜덤 생성 던전을 게임이 만드는 방법 — 저세상개발자, 2026](https://www.youtube.com/shorts/_0qjqwigjLc) - Spelunky, Dead Cells, and Isaac generation.
+2. [전설로 남은 게임의 랜덤맵 생성 — 저세상개발자, 2025](https://www.youtube.com/shorts/vVVyFUzs-HM) - Rogue's grid and maze algorithm.

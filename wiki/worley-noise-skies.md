@@ -3,7 +3,8 @@ type: Technique
 title: Worley Noise Skies
 description: Fake vast skies with a skybox, then generate realistic clouds by layering Worley noise with Perlin noise.
 tags: [graphics, noise, sky, clouds]
-status: draft
+dimensions: [3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -41,4 +42,4 @@ textures (Minecraft-style thickened quads) read as stylized, not real.
 
 # Citations
 
-1. [게임 하늘을 만드는 신기한 수학 기법 — 저세상개발자](https://www.youtube.com/shorts/UxTa_8XlJfo) - the short this page is drawn from ([source record](registry/sources/yt-short-worley-noise-skies.yaml)).
+1. [게임 하늘을 만드는 신기한 수학 기법 — 저세상개발자, 2026](https://www.youtube.com/shorts/UxTa_8XlJfo) - the short this page is drawn from.

@@ -3,7 +3,8 @@ type: Technique
 title: Z-Targeting Lock-On
 description: One button snaps camera and character to an enemy, remaps movement around the target, and a UI companion teaches the whole system.
 tags: [design, camera, combat, classic]
-status: draft
+dimensions: [3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -43,4 +44,4 @@ the template for all lock-on systems since:
 
 # Citations
 
-1. [세계 최초로 에임핵을 도입한 게임 — 저세상개발자](https://www.youtube.com/shorts/OjbUm_hnYFU) - the short this page is drawn from ([source record](registry/sources/yt-short-z-targeting.yaml)).
+1. [세계 최초로 에임핵을 도입한 게임 — 저세상개발자, 2025](https://www.youtube.com/shorts/OjbUm_hnYFU) - the short this page is drawn from.

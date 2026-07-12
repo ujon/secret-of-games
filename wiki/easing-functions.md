@@ -3,7 +3,8 @@ type: Technique
 title: Easing Functions
 description: Shape motion with curves — smoothstep, smootherstep, bounce, ease-in-out — and ship them as Bézier approximations.
 tags: [animation, math, easing]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -47,5 +48,5 @@ cubic), which is also how fonts and vector icons store shapes.
 
 # Citations
 
-1. [게임 애니메이션을 만드는 수학 — 저세상개발자](https://www.youtube.com/shorts/TomzUe30Ltg) - the easing short this page is drawn from ([source record](registry/sources/yt-short-easing-math.yaml)).
-2. [벡터파일에서 곡선을 어떻게 저장할까? — 저세상개발자](https://www.youtube.com/shorts/0MySBqE02fU) - the Bézier-curve short backing the approximation section ([source record](registry/sources/yt-short-bezier-curves.yaml)).
+1. [게임 애니메이션을 만드는 수학 — 저세상개발자, 2026](https://www.youtube.com/shorts/TomzUe30Ltg) - the easing short this page is drawn from.
+2. [벡터파일에서 곡선을 어떻게 저장할까? — 저세상개발자, 2025](https://www.youtube.com/shorts/0MySBqE02fU) - the Bézier-curve short backing the approximation section.

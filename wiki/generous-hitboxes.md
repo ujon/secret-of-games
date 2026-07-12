@@ -3,7 +3,8 @@ type: Technique
 title: Generous Hitboxes
 description: Bias collision shapes for the player — generous attack boxes, strict-but-delayed enemy boxes, shrunken dodge boxes — and sell hits with hit-stop.
 tags: [design, collision, game-feel]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -46,4 +47,4 @@ Bias every asymmetry toward the player:
 
 # Citations
 
-1. [게이머에게 관대한 게임의 피격 판정 — 저세상개발자](https://www.youtube.com/shorts/hUpx8lUaiDU) - the short this page is drawn from ([source record](registry/sources/yt-short-generous-hitboxes.yaml)).
+1. [게이머에게 관대한 게임의 피격 판정 — 저세상개발자, 2026](https://www.youtube.com/shorts/hUpx8lUaiDU) - the short this page is drawn from.

@@ -3,7 +3,8 @@ type: Technique
 title: A* Pathfinding
 description: Find shortest paths on a region graph with Dijkstra, speed it up with a goal-ward heuristic (A*), and switch to flow fields for crowds.
 tags: [ai, pathfinding, algorithms]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -44,4 +45,4 @@ path at once.
 
 # Citations
 
-1. [게임 속 길찾기에 숨겨져 있는 수학 이론 — 저세상개발자](https://www.youtube.com/shorts/qMGONAZGIqE) - the short this page is drawn from ([source record](registry/sources/yt-short-astar-pathfinding.yaml)).
+1. [게임 속 길찾기에 숨겨져 있는 수학 이론 — 저세상개발자, 2026](https://www.youtube.com/shorts/qMGONAZGIqE) - the short this page is drawn from.

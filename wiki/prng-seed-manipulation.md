@@ -3,7 +3,8 @@ type: Reference
 title: PRNG Seed Manipulation
 description: Classic games' randomness is a seeded sequence — know the seed, know every roll — which players exploited for shinies and speedruns.
 tags: [classic, random, prng]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -51,4 +52,4 @@ hunting passed into history.
 
 # Citations
 
-1. [고전 게임에서 확률 조작하는 방법 — 저세상개발자](https://www.youtube.com/shorts/djGVMe4imWw) - the short this page is drawn from ([source record](registry/sources/yt-short-rng-manipulation.yaml)).
+1. [고전 게임에서 확률 조작하는 방법 — 저세상개발자, 2025](https://www.youtube.com/shorts/djGVMe4imWw) - the short this page is drawn from.

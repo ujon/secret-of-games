@@ -3,7 +3,8 @@ type: Technique
 title: Jump Physics via Euler Integration
 description: Step velocity and position frame by frame with designer-chosen gravity — heavier falling than rising — instead of real projectile motion.
 tags: [physics, platformer, math]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -50,4 +51,4 @@ designer is free to break physics:
 
 # Citations
 
-1. [물리 역학을 무시하는 게임 점프의 수식 — 저세상개발자](https://www.youtube.com/shorts/dluLPk0zjIs) - the short this page is drawn from ([source record](registry/sources/yt-short-jump-euler.yaml)).
+1. [물리 역학을 무시하는 게임 점프의 수식 — 저세상개발자, 2026](https://www.youtube.com/shorts/dluLPk0zjIs) - the short this page is drawn from.

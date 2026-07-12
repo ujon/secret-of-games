@@ -3,7 +3,8 @@ type: Technique
 title: Password Save Systems
 description: Encode progress into a short code — packed state, a random salt, and a checksum — so cartridges without save memory could still "save".
 tags: [classic, saves, encoding]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -45,4 +46,4 @@ start:
 
 # Citations
 
-1. [비밀번호가 세이브 파일이 되었던 고전 게임 — 저세상개발자](https://www.youtube.com/shorts/ave58m6vuDw) - the short this page is drawn from ([source record](registry/sources/yt-short-password-saves.yaml)).
+1. [비밀번호가 세이브 파일이 되었던 고전 게임 — 저세상개발자, 2025](https://www.youtube.com/shorts/ave58m6vuDw) - the short this page is drawn from.

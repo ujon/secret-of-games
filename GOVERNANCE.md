@@ -29,10 +29,9 @@ the shape of the bundle; the agent checks that it is true.
 | `.docs/llm-wiki.md` | Pattern reference | The living-wiki operating model (vendored reference). |
 | `.docs/technique-template.md` | Page template | Starting shape for a new technique page. |
 | `wiki/index.md` | Bundle map | Catalog of every page and registry; carries `okf_version`. |
-| `wiki/<technique>.md` | Technique | One game-development trick, its topic carried in `tags`. |
-| `wiki/registry/index.md` | Registry guide | Schemas and rules for the source and platform registries. |
-| `wiki/registry/sources/<slug>.yaml` | Source record | Original link, distilled summary, assets, and the techniques it informs. |
-| `wiki/registry/sources/assets/<slug>/` | Source assets | Photos and clips captured from a source, listed in its record. |
+| `wiki/<technique>.md` | Technique | One game-development trick, its topic carried in `tags`; sources cited inline. |
+| `wiki/registry/index.md` | Registry guide | Schemas and rules for the platform registry. |
+| `wiki/assets/<page>/` | Page assets | Photos and clips captured from sources, referenced by their page. |
 | `wiki/registry/platforms/*.yaml` | Platform registry | Which techniques each engine provides, by version, with doc links. |
 | `wiki/dictionary.yaml` | Glossary | Abbreviations and jargon used across the wiki, with definitions. |
 | `wiki/log.md` | Update log | Chronological history of ingests and lints. |
@@ -44,8 +43,8 @@ Edit them only to re-sync with upstream, not to change local policy.
 
 ## Lifecycle States
 
-Declare lifecycle with a `status` field — in a technique page's
-frontmatter or a source record's YAML. Omitting it means `stable`.
+Declare lifecycle with a `status` field in a page's frontmatter. Omitting
+it means `stable`.
 
 | State | Meaning | Change rule |
 | --- | --- | --- |
@@ -53,13 +52,18 @@ frontmatter or a source record's YAML. Omitting it means `stable`.
 | `stable` | Verified against a cited source and cross-linked. | Change only with a supporting source; flag contradictions. |
 | `deprecated` | Superseded or found incorrect. | Name the replacement page and why it was retired. |
 
+A new page enters as `draft` only while its source content is unverified
+(e.g. no transcript captured). When a page is written *from* the captured
+source and cross-linked, it qualifies as `stable` immediately — don't
+leave verified pages parked in `draft`.
+
 ## Provenance
 
-Every wiki page and source record names the model that last substantially
-wrote it in a `model` field (e.g. `model: claude-fable-5`), so authorship
-stays inspectable as models change over time. The validators enforce the
-field's presence; updating a page without updating a stale `model` value
-is a lint finding, not a validator error.
+Every wiki page names the model that last substantially wrote it in a
+`model` field (e.g. `model: claude-fable-5`), so authorship stays
+inspectable as models change over time. The validators enforce the field's
+presence; updating a page without updating a stale `model` value is a lint
+finding, not a validator error.
 
 ## Staleness Control
 
@@ -83,15 +87,14 @@ Run the validators before committing a batch of changes:
 npm run validate
 ```
 
-This runs six zero-dependency checks (also run in CI):
+This runs five zero-dependency checks (also run in CI):
 
 | Check | Script | Enforces |
 | --- | --- | --- |
-| OKF conformance | `.scripts/validate-okf.mjs` | Every markdown doc repo-wide (vendored `.docs/` exempt) has a non-empty `type`, and wiki docs also a `model`; reserved files follow §6/§7; `wiki/index.md` carries `okf_version`. |
+| OKF conformance | `.scripts/validate-okf.mjs` | Every markdown doc repo-wide (vendored `.docs/` exempt) has a non-empty `type`; wiki docs also need a `model` and valid `dimensions`; reserved files follow §6/§7; `wiki/index.md` carries `okf_version`. |
 | Links | `.scripts/validate-links.mjs` | Every relative markdown link resolves to a file that exists. |
-| Index freshness | `.scripts/validate-index.mjs` | Every concept and markdown-bearing subdirectory is listed in its directory's `index.md`; data-only directories are exempt. |
+| Index freshness | `.scripts/validate-index.mjs` | Every concept and markdown-bearing subdirectory is listed in its directory's `index.md`, with the concept's dimensions and tags shown as chips; data-only directories are exempt. |
 | Platform registries | `.scripts/validate-platforms.mjs` | Every registry entry points to a real technique page and has a `since` version and a `doc` URL. |
-| Source records | `.scripts/validate-sources.mjs` | Every record has a `title`, a `model`, and an http(s) `url`; its technique ids resolve to real pages; its asset paths exist. |
 | Dictionary | `.scripts/validate-dictionary.mjs` | Every term has a `definition`; its `see` ids resolve to real pages. |
 
 What the validators cannot check — accuracy, contradictions, and stale

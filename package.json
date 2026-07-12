@@ -6,12 +6,11 @@
   "description": "An LLM wiki of secret game-development techniques (OKF bundle).",
   "license": "MIT",
   "scripts": {
-    "validate": "npm run validate:okf && npm run validate:links && npm run validate:index && npm run validate:platforms && npm run validate:sources && npm run validate:dictionary",
+    "validate": "npm run validate:okf && npm run validate:links && npm run validate:index && npm run validate:platforms && npm run validate:dictionary",
     "validate:okf": "node .scripts/validate-okf.mjs",
     "validate:links": "node .scripts/validate-links.mjs",
     "validate:index": "node .scripts/validate-index.mjs",
     "validate:platforms": "node .scripts/validate-platforms.mjs",
-    "validate:sources": "node .scripts/validate-sources.mjs",
     "validate:dictionary": "node .scripts/validate-dictionary.mjs"
   }
 }

@@ -3,7 +3,8 @@ type: Technique
 title: Raycast Line of Sight
 description: Answer "can it see me?" by shooting rays — filtered by distance and view cone first — and reuse the same probe for rendering and level logic.
 tags: [ai, raycasting, visibility]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -49,7 +50,7 @@ The same primitive stretches surprisingly far:
 
 # Citations
 
-1. [선을 쏘아 알아내는 게임의 시야 계산법 — 저세상개발자](https://www.youtube.com/shorts/PRwkpITfW-s) - the short this page is drawn from ([source record](registry/sources/yt-short-raycast-line-of-sight.yaml)).
+1. [선을 쏘아 알아내는 게임의 시야 계산법 — 저세상개발자, 2026](https://www.youtube.com/shorts/PRwkpITfW-s) - the short this page is drawn from.
 2. [Unity — Physics.Raycast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) - engine raycast API.
 3. [Unreal — Traces with Raycasts](https://dev.epicgames.com/documentation/en-us/unreal-engine/traces-with-raycasts-in-unreal-engine) - engine trace API.
 4. [Godot — RayCast3D](https://docs.godotengine.org/en/stable/classes/class_raycast3d.html) - engine raycast node.

@@ -3,7 +3,8 @@ type: Technique
 title: Camera Smoothing and Deadzone
 description: Let the camera chase the character lazily — asymptotic averaging plus a no-follow deadzone — so motion reads clearly without nausea.
 tags: [design, camera, game-feel]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -44,4 +45,4 @@ character never shifts within the frame.
 
 # Citations
 
-1. [게임 카메라에 숨겨진 수학 기법 — 저세상개발자](https://www.youtube.com/shorts/caPi9d2gP7I) - the short this page is drawn from ([source record](registry/sources/yt-short-camera-math.yaml)).
+1. [게임 카메라에 숨겨진 수학 기법 — 저세상개발자, 2026](https://www.youtube.com/shorts/caPi9d2gP7I) - the short this page is drawn from.

@@ -3,7 +3,8 @@ type: Technique
 title: Rollback Netcode
 description: Play local inputs instantly and let remote clients skip or fast-forward missed frames, instead of delaying everyone until inputs arrive.
 tags: [netcode, fighting, multiplayer]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -39,4 +40,4 @@ jitter, and rollback handles what remains.
 
 # Citations
 
-1. [느린 네트워크 속도를 게임이 보정하는 비법 — 저세상개발자](https://www.youtube.com/shorts/kap1_O66XCY) - the short this page is drawn from ([source record](registry/sources/yt-short-rollback-netcode.yaml)).
+1. [느린 네트워크 속도를 게임이 보정하는 비법 — 저세상개발자, 2026](https://www.youtube.com/shorts/kap1_O66XCY) - the short this page is drawn from.

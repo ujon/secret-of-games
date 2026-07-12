@@ -3,7 +3,8 @@ type: Technique
 title: Gerstner Waves
 description: Move water-surface points in circles instead of just up-down sine motion to get sharp, natural wave crests.
 tags: [graphics, water, shaders]
-status: draft
+dimensions: [3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -43,4 +44,4 @@ Y(x, t) =     A·sin(k·x − ω·t)     # vertical rise
 
 # Citations
 
-1. [게임 속 물 표현을 하는 수식을 만드는 방법 — 저세상개발자](https://www.youtube.com/shorts/RFDIq0ZdJ3s) - the short this page is drawn from ([source record](registry/sources/yt-short-gerstner-waves.yaml)).
+1. [게임 속 물 표현을 하는 수식을 만드는 방법 — 저세상개발자, 2026](https://www.youtube.com/shorts/RFDIq0ZdJ3s) - the short this page is drawn from.

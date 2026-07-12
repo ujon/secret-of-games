@@ -2,35 +2,10 @@
 
 Structured YAML records that back the wiki, kept beside the knowledge
 pages. The glossary lives at the bundle root as
-[dictionary.yaml](../dictionary.yaml).
+[dictionary.yaml](../dictionary.yaml); sources are cited directly in each
+page's Citations (original title, channel/author, year, and URL).
 
 Primary role: Registry guide.
-
-## Sources — `sources/`
-
-One YAML record per ingested source (talk, paper, post, video, book),
-named by slug, e.g. `sources/gdc-2015-naughty-dog-ai.yaml`, following this
-schema:
-
-```yaml
-title: <Source title>
-url: https://…              # link to the original (required)
-author: <Speaker / author>
-year: 2015
-medium: talk                # talk | paper | post | video | book
-status: draft               # draft | stable | deprecated; omit for stable
-model: claude-fable-5       # model that wrote the record (required)
-tags: [ai, animation]
-summary: |
-  - Distilled takeaway, one claim per line.
-techniques:                 # technique ids this source informs
-  - <technique>             # id = the page's filename without the .md
-assets:                     # optional media captured from the source
-  - assets/<slug>/diagram.png
-```
-
-Photos and clips go under `sources/assets/<slug>/` and are listed in the
-record's `assets`. Keep summaries distilled — never paste the original text.
 
 ## Platforms — `platforms/`
 
@@ -50,7 +25,6 @@ techniques:
 
 ## Validation
 
-`.scripts/validate-sources.mjs`, `.scripts/validate-platforms.mjs`, and
-`.scripts/validate-dictionary.mjs` (all in `npm run validate` and CI)
-enforce that records carry their required fields, technique ids resolve to
-real pages, and asset paths exist.
+`.scripts/validate-platforms.mjs` and `.scripts/validate-dictionary.mjs`
+(both in `npm run validate` and CI) enforce that entries carry their
+required fields and that technique ids resolve to real pages.

@@ -3,7 +3,8 @@ type: Technique
 title: Billboarding
 description: Render flat images that always face the camera — screen-aligned, viewpoint-oriented, or axis-aligned — for cheap 3D presence.
 tags: [graphics, billboard, rendering]
-status: draft
+dimensions: [3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -44,6 +45,6 @@ the other two variants. Modern games still billboard distant objects
 
 # Citations
 
-1. [게이머를 속이는 게임의 3D 연출 방법 — 저세상개발자](https://www.youtube.com/shorts/DXsKd52lomQ) - the short this page is drawn from ([source record](registry/sources/yt-short-billboarding.yaml)).
+1. [게이머를 속이는 게임의 3D 연출 방법 — 저세상개발자, 2026](https://www.youtube.com/shorts/DXsKd52lomQ) - the short this page is drawn from.
 2. [Unity — BillboardRenderer](https://docs.unity3d.com/ScriptReference/BillboardRenderer.html) - engine billboard component.
 3. [Godot — BaseMaterial3D `billboard_mode`](https://docs.godotengine.org/en/stable/classes/class_basematerial3d.html) - engine billboard material flag.

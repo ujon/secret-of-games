@@ -3,7 +3,8 @@ type: Technique
 title: Coyote Time and Jump Buffering
 description: Forgive jump timing in both directions — accept jumps shortly after leaving a ledge and queue jumps pressed shortly before landing.
 tags: [design, platformer, game-feel, input]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -42,4 +43,4 @@ the controls "feel tight".
 
 # Citations
 
-1. [게임 점프에 숨겨진 판정 타이밍 조절 — 저세상개발자](https://www.youtube.com/shorts/0gkwRtolL4Y) - the short this page is drawn from ([source record](registry/sources/yt-short-coyote-time.yaml)).
+1. [게임 점프에 숨겨진 판정 타이밍 조절 — 저세상개발자, 2026](https://www.youtube.com/shorts/0gkwRtolL4Y) - the short this page is drawn from.

@@ -3,9 +3,10 @@ type: Technique
 title: Perlin Noise Terrain
 description: Generate natural-looking terrain by sampling layered Perlin noise as a heightmap instead of hand-authoring or using raw randomness.
 tags: [graphics, procedural-generation, noise, terrain]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
-timestamp: 2026-07-12T15:48:00Z
+timestamp: 2026-07-12T16:55:00Z
 ---
 
 # Problem
@@ -27,7 +28,8 @@ point, interpolates the dot products of those gradients with the point's
 offsets — using a quintic fade curve (`6t⁵ − 15t⁴ + 10t³`) so first and
 second derivatives stay continuous. The result is a smooth, band-limited
 random field: deterministic for a given seed, continuous everywhere, and
-evaluable at any coordinate independently.
+evaluable at any coordinate independently — the technique behind terrain
+generation in games like Minecraft.
 
 To turn it into terrain:
 
@@ -86,7 +88,7 @@ Godot   FastNoiseLite.get_noise_2d(x, y)         # noise_type = TYPE_PERLIN
 
 # Citations
 
-1. [게임에서 지형을 만들 때 쓰는 특수한 수학 기법 — 저세상개발자](https://www.youtube.com/shorts/kY9TYQYxCZM) - the short that prompted this page ([source record](registry/sources/yt-short-perlin-noise-terrain.yaml)).
+1. [게임에서 지형을 만들 때 쓰는 특수한 수학 기법 — 저세상개발자, 2026](https://www.youtube.com/shorts/kY9TYQYxCZM) - the short this page is drawn from, verified against its captions.
 2. [Ken Perlin — Improving Noise (SIGGRAPH 2002)](https://mrl.cs.nyu.edu/~perlin/paper445.pdf) - the quintic fade curve and gradient-lattice formulation.
 3. [Unity — Mathf.PerlinNoise](https://docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html) - API and the may-exceed-[0,1] caveat.
 4. [Unreal — FMath::PerlinNoise2D](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Core/FMath/PerlinNoise2D) - API and [-1, 1] range.

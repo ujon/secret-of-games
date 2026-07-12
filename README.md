@@ -36,10 +36,9 @@ YAML frontmatter, one technique per file, kept flat at the bundle root
 with topics carried as `tags`. [`wiki/index.md`](wiki/index.md) is the
 bundle map cataloging every page.
 
-Structured records travel inside the bundle as YAML:
-[`wiki/registry/`](wiki/registry/index.md) holds one record per ingested
-source (original link, distilled summary, and any captured photos or
-clips) plus one registry per engine tracking which techniques Unity,
+Sources are cited directly in each page's Citations (title, channel,
+year, URL). Structured records travel inside the bundle as YAML:
+[`wiki/registry/`](wiki/registry/index.md) tracks which techniques Unity,
 Unreal, and Godot provide — by version, with doc links — and
 `wiki/dictionary.yaml` defines the abbreviations and jargon the pages
 use. Everything outside `wiki/` (this guide, `AGENTS.md`, `.docs/`) is

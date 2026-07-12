@@ -3,7 +3,8 @@ type: Technique
 title: Lag Compensation
 description: Judge shots against slightly rewound target positions so players can aim at what they actually see despite network delay.
 tags: [netcode, fps, multiplayer]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -39,4 +40,4 @@ what's on screen is then enough.
 
 # Citations
 
-1. [시간을 되감는 FPS 게임의 사격 판정 — 저세상개발자](https://www.youtube.com/shorts/o7waSG4jROw) - the short this page is drawn from ([source record](registry/sources/yt-short-lag-compensation.yaml)).
+1. [시간을 되감는 FPS 게임의 사격 판정 — 저세상개발자, 2026](https://www.youtube.com/shorts/o7waSG4jROw) - the short this page is drawn from.

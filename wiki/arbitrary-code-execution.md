@@ -3,7 +3,8 @@ type: Reference
 title: Arbitrary Code Execution in Classic Games
 description: How corrupted memory turns controller inputs into a programming interface — the glitch behind "booting" other games inside classics.
 tags: [classic, exploit, memory]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -48,4 +49,4 @@ entire programs into a running game.
 
 # Citations
 
-1. [게임 컨트롤러로 게임을 즉석에서 재구축하는 방법 — 저세상개발자](https://www.youtube.com/shorts/uj6016N96JY) - the short this page is drawn from ([source record](registry/sources/yt-short-controller-ace.yaml)).
+1. [게임 컨트롤러로 게임을 즉석에서 재구축하는 방법 — 저세상개발자, 2025](https://www.youtube.com/shorts/uj6016N96JY) - the short this page is drawn from.

@@ -3,7 +3,8 @@ type: Technique
 title: Risk-Reward Design
 description: Pair a safe small-reward option with a dangerous big-reward one so players volunteer for risk and feel the thrill of the gamble.
 tags: [design, mechanics, psychology]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -43,4 +44,4 @@ overcharge mechanics, banking-vs-carrying scores.
 
 # Citations
 
-1. [게임의 쾌감을 주는 위험 대 보상 설계 — 저세상개발자](https://www.youtube.com/shorts/SauTVeoo6K0) - the short this page is drawn from ([source record](registry/sources/yt-short-risk-reward.yaml)).
+1. [게임의 쾌감을 주는 위험 대 보상 설계 — 저세상개발자, 2026](https://www.youtube.com/shorts/SauTVeoo6K0) - the short this page is drawn from.

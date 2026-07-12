@@ -3,7 +3,8 @@ type: Technique
 title: Inverse Kinematics
 description: Animate procedurally by choosing where a foot or hand must land and solving the joint chain backwards to reach it.
 tags: [animation, ik, procedural, physics]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -46,4 +47,4 @@ work backwards from the effector.
 
 # Citations
 
-1. [게임 캐릭터가 계단을 오르는 기법 — 저세상개발자](https://www.youtube.com/shorts/0rjhNtdmgVI) - the short this page is drawn from ([source record](registry/sources/yt-short-procedural-animation-ik.yaml)).
+1. [게임 캐릭터가 계단을 오르는 기법 — 저세상개발자, 2026](https://www.youtube.com/shorts/0rjhNtdmgVI) - the short this page is drawn from.

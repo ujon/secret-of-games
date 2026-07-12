@@ -3,7 +3,8 @@ type: Technique
 title: Systemic Chemistry Engine
 description: Layer a rule-based state engine over the physics engine — elements act on materials under a few global laws — to get emergent gameplay (BotW).
 tags: [design, systemic, engine]
-status: draft
+dimensions: [2d, 3d]
+status: stable
 model: claude-fable-5
 timestamp: 2026-07-12T16:18:00Z
 ---
@@ -47,4 +48,4 @@ prototype before building the game on it.
 
 # Citations
 
-1. [젤다의 전설 야숨을 디자인한 특별한 게임 엔진 — 저세상개발자](https://www.youtube.com/shorts/1yxDf1WUIBk) - the short this page is drawn from ([source record](registry/sources/yt-short-botw-chemistry-engine.yaml)).
+1. [젤다의 전설 야숨을 디자인한 특별한 게임 엔진 — 저세상개발자, 2026](https://www.youtube.com/shorts/1yxDf1WUIBk) - the short this page is drawn from.
