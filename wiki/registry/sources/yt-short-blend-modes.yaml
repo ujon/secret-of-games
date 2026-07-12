@@ -1,0 +1,18 @@
+title: 게임 이펙트를 만드는 신기한 색상 계산 (Color math behind game effects)
+url: https://www.youtube.com/shorts/Of9pFtvVBJQ
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [graphics, shaders, blending]
+summary: |
+  - Treating black as 0 and white as 1, adding two images' color values
+    brightens — additive blending, which glows regardless of the backdrop,
+    perfect for light effects (weak on bright backgrounds).
+  - Multiplying color values darkens like mixing pigments — multiply
+    blending for shadows (weak on dark backgrounds).
+  - Games also use screen, alpha, and other blend modes to compose
+    effects.
+techniques:
+  - blend-modes

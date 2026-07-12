@@ -12,3 +12,11 @@ techniques:
   perlin-noise-terrain:
     since: "4.0"
     doc: https://docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html
+  # Physics.Raycast — earliest hosted doc archive is 4.0.
+  raycast-line-of-sight:
+    since: "4.0"
+    doc: https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+  # BillboardRenderer — earliest probed doc archive is 5.6; may predate it.
+  billboarding:
+    since: "5.6"
+    doc: https://docs.unity3d.com/ScriptReference/BillboardRenderer.html

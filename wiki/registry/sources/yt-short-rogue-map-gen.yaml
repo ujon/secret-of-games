@@ -1,0 +1,17 @@
+title: 전설로 남은 게임의 랜덤맵 생성 (Rogue's random map generation)
+url: https://www.youtube.com/shorts/vVVyFUzs-HM
+author: 저세상개발자 (YouTube channel)
+year: 2025
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, procedural-generation, classic]
+summary: |
+  - Rogue (the roguelike namesake) splits the map into a 3×3 grid of
+    zones and randomly places one room per chosen zone.
+  - Rooms are populated with stairs, letter monsters, and symbol items;
+    occasionally a room becomes a maze instead.
+  - Its mazes are carved by random walk with backtracking: wander until
+    stuck, back up, branch — the walked path is the maze.
+techniques:
+  - procedural-dungeon-generation

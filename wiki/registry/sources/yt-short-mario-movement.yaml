@@ -1,0 +1,17 @@
+title: 슈퍼 마리오의 조작감은 왜 혁신적일까? (Why Mario's controls feel great)
+url: https://www.youtube.com/shorts/dNsyscOrNMY
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, platformer, game-feel]
+summary: |
+  - Mario decelerates gradually on release and skids on reversal — smooth
+    motion plus fine control.
+  - Jump height scales with button hold time; releasing early cuts upward
+    velocity for a fast fall.
+  - Running increases jump distance, and air control lets players correct
+    mistakes mid-jump — advanced for its 1980s peers.
+techniques:
+  - platformer-movement-feel

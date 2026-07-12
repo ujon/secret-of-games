@@ -13,3 +13,8 @@ techniques:
   perlin-noise-terrain:
     since: "4.27"
     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Core/FMath/PerlinNoise2D
+  # Line traces are a core physics query shipped since early UE4; the doc
+  # link is the current guide.
+  raycast-line-of-sight:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/traces-with-raycasts-in-unreal-engine

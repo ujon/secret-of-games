@@ -1,0 +1,20 @@
+title: 게이머에게 관대한 게임의 피격 판정 (Player-friendly hit detection)
+url: https://www.youtube.com/shorts/hUpx8lUaiDU
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, collision, game-feel]
+summary: |
+  - Collisions use simple shapes (hitboxes), tuned per frame in fighting
+    games; asymmetry is deliberate — player attacks judged generously,
+    enemy attacks strictly.
+  - Enemy hitboxes activate a beat after the attack animation starts so
+    players can react; hard-to-read ranged attacks get smaller hitboxes;
+    Geometry Dash shrinks player hitboxes drastically, and dodges can
+    disable them entirely.
+  - Hit-stop freezes the screen a moment on impact so hits feel real and
+    fair.
+techniques:
+  - generous-hitboxes

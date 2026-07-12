@@ -1,0 +1,17 @@
+title: 게임의 쾌감을 주는 위험 대 보상 설계 (Risk-versus-reward design)
+url: https://www.youtube.com/shorts/SauTVeoo6K0
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, mechanics]
+summary: |
+  - Games pair a safe low-reward option with a risky high-reward one so
+    players volunteer for danger and feel the thrill of the gamble.
+  - Classic examples: stomping enemies in Mario instead of fleeing,
+    Pac-Man's power pellet that turns ghosts edible but times out.
+  - Modern example: Bloodborne's rally system — attacking recovers lost
+    health but getting hit while attacking loses more.
+techniques:
+  - risk-reward-design

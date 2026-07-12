@@ -42,3 +42,177 @@ terms:
       A 2D grid (or function) mapping each (x, z) position to one height —
       cheap and streamable, but unable to represent caves or overhangs.
     see: [perlin-noise-terrain]
+  skybox:
+    definition: >
+      A cube of sky imagery wrapped around the world and drawn as if
+      infinitely far, so players mistake it for real distance.
+    see: [worley-noise-skies]
+  Worley noise:
+    definition: >
+      Cellular noise made by scattering points in a grid and coloring each
+      position by distance to the nearest point; reads as cells or clouds.
+    see: [worley-noise-skies]
+  Gerstner wave:
+    definition: >
+      A water waveform that moves surface points in circles instead of
+      straight up-down, producing sharp crests real sines can't.
+    see: [gerstner-waves]
+  lag compensation:
+    definition: >
+      Server-side rewind: judging a shot against where the target was when
+      the shooter saw them, canceling network delay.
+    see: [lag-compensation]
+  rollback netcode:
+    definition: >
+      Netcode that plays local input instantly and lets remote clients skip
+      or fast-forward missed frames when late input arrives.
+    see: [rollback-netcode]
+  hitscan:
+    definition: >
+      Shot judgment by an instant ray along the aim instead of a simulated
+      projectile.
+    see: [hitscan-shooting]
+  head glitch:
+    definition: >
+      Camera-origin shooting abuse — behind low cover the camera can see
+      and shoot while the shooter's body stays protected.
+    see: [hitscan-shooting]
+  hitbox:
+    definition: >
+      The simple collision shape a game tests instead of the visible body;
+      attack and hurt boxes are tuned separately, often per frame.
+    see: [generous-hitboxes]
+  hit-stop:
+    definition: >
+      Freezing the game a few frames on impact so a landed hit is felt.
+    see: [generous-hitboxes]
+  coyote time:
+    definition: >
+      A short grace window after leaving a ledge during which a jump still
+      counts.
+    see: [coyote-time-jump-buffering]
+  jump buffering:
+    definition: >
+      Queuing a jump pressed just before landing so it fires on the exact
+      touchdown frame.
+    see: [coyote-time-jump-buffering]
+  corner correction:
+    definition: >
+      Nudging a character sideways or up when they barely clip a geometry
+      corner, letting the jump or dash continue.
+    see: [corner-correction]
+  billboard:
+    definition: >
+      A flat image rotated every frame to face the camera, faking 3D
+      presence cheaply.
+    see: [billboarding]
+  dithering:
+    definition: >
+      Interleaving two colors in a pattern to fake a gradient within a
+      limited palette.
+    see: [pixel-art-rules]
+  sub-pixel animation:
+    definition: >
+      Suggesting motion smaller than one pixel by shifting colors inside
+      the sprite instead of moving it.
+    see: [pixel-art-rules]
+  palette swap:
+    definition: >
+      Rebinding one sprite's index data to a different color table for
+      cheap variants.
+    see: [palette-indexed-graphics]
+  Mode 7:
+    definition: >
+      The Super Famicom feature that affine-transforms a background layer
+      per scanline, faking a 3D ground plane from a flat tilemap.
+    see: [mode-7-affine]
+  additive blending:
+    definition: >
+      Compositing by adding color values — only brightens, like light;
+      the standard mode for glows and particles.
+    see: [blend-modes]
+  multiply blending:
+    definition: >
+      Compositing by multiplying color values — only darkens, like
+      pigment; the standard mode for shadows and tints.
+    see: [blend-modes]
+  A*:
+    definition: >
+      Shortest-path search that prioritizes by cost-so-far plus an
+      obstacle-ignoring estimate to the goal, focusing the search.
+    see: [astar-pathfinding]
+  flow field:
+    definition: >
+      A precomputed best-direction-per-region map toward one goal that
+      many agents can follow without individual path searches.
+    see: [astar-pathfinding]
+  IK:
+    expansion: inverse kinematics
+    definition: >
+      Solving joint positions backwards from a chosen end-effector target
+      (place the foot, derive the knee).
+    see: [inverse-kinematics]
+  Euler integration:
+    definition: >
+      Stepping motion per frame — add acceleration to velocity, velocity
+      to position — instead of solving exact equations.
+    see: [jump-physics-euler]
+  Elo rating:
+    definition: >
+      A skill score where the gap between two players predicts win
+      probability and points transfer by how surprising the result was.
+    see: [elo-matchmaking]
+  rubber banding:
+    definition: >
+      Racing-style difficulty aid that slows leaders and boosts trailers
+      so the pack stays close regardless of skill.
+    see: [dynamic-difficulty-adjustment]
+  DDA:
+    expansion: dynamic difficulty adjustment
+    definition: >
+      Quietly tuning challenge to measured player performance in real
+      time.
+    see: [dynamic-difficulty-adjustment]
+  pity timer:
+    definition: >
+      A miss counter that guarantees the top reward at a cap, bounding
+      worst-case bad luck.
+    see: [pity-timers-and-prd]
+  shuffle bag:
+    definition: >
+      Drawing outcomes from a bag without replacement and refilling only
+      when empty, so no outcome can drought for long.
+    see: [pity-timers-and-prd]
+  PRD:
+    expansion: pseudo-random distribution
+    definition: >
+      Variable per-try odds that grow after each miss and reset on
+      success, keeping the advertised average without streaks.
+    see: [pity-timers-and-prd]
+  PRNG:
+    expansion: pseudo-random number generator
+    definition: >
+      A deterministic sequence of random-looking numbers grown from a
+      seed; same seed, same "luck".
+    see: [prng-seed-manipulation]
+  seed:
+    definition: >
+      The initial value that determines a PRNG's entire output sequence —
+      and therefore every "random" outcome derived from it.
+    see: [prng-seed-manipulation]
+  checksum:
+    definition: >
+      A small value derived from data (like a digit sum) used to detect
+      tampering or typos when the data is re-entered.
+    see: [password-save-systems]
+  ACE:
+    expansion: arbitrary code execution
+    definition: >
+      Getting a program to execute attacker-chosen data as code — in
+      classic games, via memory corruption plus controller input.
+    see: [arbitrary-code-execution]
+  Z-targeting:
+    definition: >
+      Ocarina of Time's lock-on: one button snaps camera and character to
+      an enemy and remaps movement to orbit it.
+    see: [z-targeting-lock-on]

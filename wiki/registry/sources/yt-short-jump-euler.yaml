@@ -1,0 +1,19 @@
+title: 물리 역학을 무시하는 게임 점프의 수식 (Game jumps that ignore physics)
+url: https://www.youtube.com/shorts/dluLPk0zjIs
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [physics, platformer, math]
+summary: |
+  - Real projectile motion has symmetric rise and fall, but games like
+    Mario rise slower than they fall — better feel and easy variable jump
+    height from button hold time.
+  - Instead of evaluating the ideal parabola, games step: each frame add
+    gravity to velocity, then velocity to position — Euler integration,
+    fast and simple per frame.
+  - Asymmetric gravity (lighter going up, heavier falling) shapes the
+    designer's curve, not the physicist's.
+techniques:
+  - jump-physics-euler

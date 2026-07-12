@@ -1,0 +1,19 @@
+title: 세계 최초로 에임핵을 도입한 게임 (Z-targeting, the first built-in aim assist)
+url: https://www.youtube.com/shorts/OjbUm_hnYFU
+author: 저세상개발자 (YouTube channel)
+year: 2025
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, camera, classic]
+summary: |
+  - Aiming in Super Mario 64 was awkward, so Ocarina of Time added
+    Z-targeting: one button snaps camera and character to face the enemy.
+  - Nearest enemy locks first; pressing again cycles targets. Movement
+    remaps too — stick forward/back approaches/retreats, left/right
+    circle-strafes around the target.
+  - The fairy Navi was invented to communicate the system: she hovers
+    over the locked target, changes color by target type, and feeds the
+    player information. Lock-on became a 3D action staple.
+techniques:
+  - z-targeting-lock-on

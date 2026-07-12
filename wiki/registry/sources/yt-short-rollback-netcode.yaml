@@ -1,0 +1,17 @@
+title: 느린 네트워크 속도를 게임이 보정하는 비법 (Delay vs rollback netcode)
+url: https://www.youtube.com/shorts/kap1_O66XCY
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [netcode, fighting]
+summary: |
+  - Delay-based netcode waits for the opponent's input before playing a
+    frame, keeping both screens in sync but feeling laggy on bad networks.
+  - Rollback netcode plays your input immediately; when the remote input
+    arrives late, the opponent's client skips/fast-forwards the missed
+    early frames — humans don't notice the catch-up.
+  - Modern games combine both: small fixed delay plus rollback for spikes.
+techniques:
+  - rollback-netcode

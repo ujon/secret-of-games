@@ -1,0 +1,19 @@
+title: 게임 캐릭터가 계단을 오르는 기법 (How characters climb stairs)
+url: https://www.youtube.com/shorts/0rjhNtdmgVI
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [animation, ik, procedural]
+summary: |
+  - Instead of canned clips, procedural animation computes poses at
+    runtime — Rain World animates its creatures this way.
+  - Inverse kinematics works backwards: pick where the foot should land,
+    then solve the knee/hip joint positions to reach it — ideal for stairs
+    and uneven ground.
+  - In 3D a knee needs an extra aim (pole) constraint to be unambiguous;
+    longer chains are solved by iteratively dragging joints toward the
+    target and re-anchoring (FABRIK-style).
+techniques:
+  - inverse-kinematics

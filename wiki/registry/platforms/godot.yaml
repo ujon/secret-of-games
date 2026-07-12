@@ -13,3 +13,11 @@ techniques:
   perlin-noise-terrain:
     since: "4.0"
     doc: https://docs.godotengine.org/en/stable/classes/class_fastnoiselite.html
+  # RayCast3D is the Godot 4 name; 3.x shipped the same node as RayCast.
+  raycast-line-of-sight:
+    since: "4.0"
+    doc: https://docs.godotengine.org/en/stable/classes/class_raycast3d.html
+  # BaseMaterial3D.billboard_mode; 3.x SpatialMaterial had billboard flags.
+  billboarding:
+    since: "4.0"
+    doc: https://docs.godotengine.org/en/stable/classes/class_basematerial3d.html

@@ -1,0 +1,17 @@
+title: 플랫폼 게임 맵 모서리에 있는 점프 위치 보정 (Corner correction in platformers)
+url: https://www.youtube.com/shorts/hjVLIojpwVk
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, platformer, collision]
+summary: |
+  - When a jump clips a ceiling corner, games nudge the character sideways
+    so the jump continues instead of bonking.
+  - Dashes into ledge corners get pushed up onto the platform; Super Mario
+    has corner correction and speedrunners exploit it.
+  - Related leniencies: wall jumps register slightly before touching the
+    wall, and jumps off just-stopped moving platforms keep their momentum.
+techniques:
+  - corner-correction

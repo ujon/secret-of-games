@@ -1,0 +1,18 @@
+title: 게임 하늘을 만드는 신기한 수학 기법 (Worley noise for game skies)
+url: https://www.youtube.com/shorts/UxTa_8XlJfo
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [graphics, noise, sky]
+summary: |
+  - Skies are faked with a skybox: a cube of sky imagery wrapped around the
+    world that players mistake for distance.
+  - Minecraft-style clouds are just thick, drifting textures; realistic
+    clouds need math instead.
+  - Worley noise scatters random points in a grid and colors each position
+    by distance to the nearest point; layering several Worley octaves with
+    Perlin noise yields natural cloud shapes.
+techniques:
+  - worley-noise-skies

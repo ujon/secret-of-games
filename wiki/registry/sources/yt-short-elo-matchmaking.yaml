@@ -1,0 +1,19 @@
+title: 게임 상대를 결정하는 매칭 시스템의 원리 (How matchmaking picks your opponents)
+url: https://www.youtube.com/shorts/uMCwH38GpuY
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, matchmaking, online]
+summary: |
+  - Matchmakers balance queue time, network proximity, and skill scores.
+  - Elo rating predicts win probability from the score gap (+100 ≈ 64/36,
+    +400 ≈ 91/9) and transfers points by how much the result deviated from
+    the prediction; used in chess, early League of Legends, a refined
+    variant in Rainbow Six.
+  - Modern systems keep formulas secret, move uncertain (new) players'
+    ratings faster, match squads by their strongest member, and prefer
+    squad-vs-squad pairing.
+techniques:
+  - elo-matchmaking

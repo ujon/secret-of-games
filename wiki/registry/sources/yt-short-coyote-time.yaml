@@ -1,0 +1,17 @@
+title: 게임 점프에 숨겨진 판정 타이밍 조절 (Coyote time and jump buffering)
+url: https://www.youtube.com/shorts/0gkwRtolL4Y
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [design, platformer, game-feel]
+summary: |
+  - Jumps pressed just after leaving a ledge still fire for a short
+    window — coyote time, named for the cartoon cliff-hang.
+  - Jumps pressed just before landing are queued and fire on touchdown —
+    jump buffering; fighting games use the same input-buffer idea for
+    combos.
+  - Both hide tiny timing errors so controls feel fair.
+techniques:
+  - coyote-time-jump-buffering

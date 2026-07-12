@@ -1,0 +1,18 @@
+title: 3D처럼 눈속임하는 고전 게임의 비밀 (Mode 7 fake 3D, feat. Super Mario Kart)
+url: https://www.youtube.com/shorts/R06WXFSWYvo
+author: 저세상개발자 (YouTube channel)
+year: 2025
+medium: video
+status: draft
+model: claude-fable-5
+tags: [graphics, classic, affine]
+summary: |
+  - Super Mario Kart's "3D" track is a warped 2D tilemap, not geometry.
+  - Affine transforms move (add), scale (multiply), rotate, or shear
+    coordinates; the Super Famicom applied them to a whole tile layer
+    (Chrono Trigger's clock animation uses the same trick).
+  - CRTs draw line by line, so scaling the tilemap differently per
+    scanline fakes perspective — which is why every Mario Kart course is
+    perfectly flat.
+techniques:
+  - mode-7-affine

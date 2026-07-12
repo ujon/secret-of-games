@@ -2,6 +2,8 @@
 
 ## 2026-07-13
 
+- Ingested the full 저세상개발자 shorts catalog (46 videos reviewed via auto-captions, 32 kept as game-development knowledge, 14 excluded as off-topic): 30 new technique pages, 32 source records, 34 new glossary terms, and verified engine-support entries for raycasting and billboarding. The Bézier short was folded into Easing Functions and the Rogue short into Procedural Dungeon Generation.
+
 - Added per-engine YAML registries (Unity, Unreal, Godot) tracking version support and doc links, with a validator.
 - Consistency pass across README, AGENTS, GOVERNANCE, and the page templates.
 - Split structured records out of the bundle into `data/`: sources became YAML records (link, summary, optional media assets) beside the platform registries, each with its own validator.

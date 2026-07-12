@@ -1,0 +1,19 @@
+title: 선을 쏘아 알아내는 게임의 시야 계산법 (Vision checks with raycasting)
+url: https://www.youtube.com/shorts/PRwkpITfW-s
+author: 저세상개발자 (YouTube channel)
+year: 2026
+medium: video
+status: draft
+model: claude-fable-5
+tags: [ai, raycasting, visibility]
+summary: |
+  - Enemy sight = cast a ray from monster to player; if it reaches without
+    hitting an obstacle, the player is seen. Many rays visualize the whole
+    field of view.
+  - Raycasting everything is expensive, so games pre-filter by distance,
+    then by view-cone angle, and raycast only the survivors.
+  - The same trick renders 2D maps as pseudo-3D (Wolfenstein/Doom: near
+    walls drawn tall, far walls short) and powers Zelda TotK's Ascend
+    (probe rays upward, check ceiling slope for a valid warp).
+techniques:
+  - raycast-line-of-sight
