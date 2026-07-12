@@ -3,8 +3,13 @@
 # Supported in Unreal version V when: since <= V and (until unset or V < until).
 #
 # Example:
-#   graphics/gpu-instancing:
+#   gpu-instancing:
 #     since: "4.22"
 #     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component
 engine: Unreal
-techniques: {}
+techniques:
+  # FMath::PerlinNoise2D/3D — likely landed earlier (~4.19; absent from 2016
+  # forums), but 4.27 is the earliest version with verified API docs.
+  perlin-noise-terrain:
+    since: "4.27"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Core/FMath/PerlinNoise2D

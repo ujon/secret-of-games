@@ -31,10 +31,10 @@ to an LLM as a knowledge base.
 ## Format
 
 The knowledge lives in [`wiki/`](wiki/), an
-[Open Knowledge Format](.docs/okf-spec.md) bundle: a tree of markdown
-files with YAML frontmatter, one technique per file, grouped into topic
-directories. Each directory carries an `index.md` listing its contents,
-and [`wiki/index.md`](wiki/index.md) is the bundle map.
+[Open Knowledge Format](.docs/okf-spec.md) bundle: markdown files with
+YAML frontmatter, one technique per file, kept flat at the bundle root
+with topics carried as `tags`. [`wiki/index.md`](wiki/index.md) is the
+bundle map cataloging every page.
 
 Structured records travel inside the bundle as YAML:
 [`wiki/registry/`](wiki/registry/index.md) holds one record per ingested

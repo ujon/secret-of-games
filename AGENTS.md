@@ -14,8 +14,9 @@ curates sources and asks questions. Write everything in English.
 
 - Your work is three moves — ingest a source, answer a question, lint for
   drift; [`.docs/llm-wiki.md`](.docs/llm-wiki.md) explains the pattern.
-- File each technique on its own page under a topic (`graphics`, `ai`,
-  `physics`, `optimization`, `design`), starting from
+- File each technique as its own page directly under `wiki/` — flat, no
+  topic folders — with its topic (`graphics`, `ai`, `physics`,
+  `optimization`, `design`) in `tags`; start from
   [`.docs/technique-template.md`](.docs/technique-template.md).
 - When you ingest a source, record it once as
   `wiki/registry/sources/<slug>.yaml` (schema in

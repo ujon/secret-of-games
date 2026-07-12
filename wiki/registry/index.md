@@ -24,7 +24,7 @@ tags: [ai, animation]
 summary: |
   - Distilled takeaway, one claim per line.
 techniques:                 # technique ids this source informs
-  - ai/<technique>          # id = path under wiki/ without the .md
+  - <technique>             # id = the page's filename without the .md
 assets:                     # optional media captured from the source
   - assets/<slug>/diagram.png
 ```
@@ -42,7 +42,7 @@ technique ids to support info. A technique is supported in engine version
 ```yaml
 engine: Unity
 techniques:
-  graphics/gpu-instancing:
+  gpu-instancing:
     since: "2018.1"         # first version that provides it (required)
     until: null             # version where removed, or omit if current
     doc: https://…          # engine documentation link (required)

@@ -3,8 +3,12 @@
 # Supported in Unity version V when: since <= V and (until unset or V < until).
 #
 # Example:
-#   graphics/gpu-instancing:
+#   gpu-instancing:
 #     since: "2018.1"
 #     doc: https://docs.unity3d.com/Manual/GPUInstancing.html
 engine: Unity
-techniques: {}
+techniques:
+  # Mathf.PerlinNoise — earliest hosted doc archive is 4.0; may predate it.
+  perlin-noise-terrain:
+    since: "4.0"
+    doc: https://docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html

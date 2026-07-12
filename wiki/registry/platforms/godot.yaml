@@ -3,8 +3,13 @@
 # Supported in Godot version V when: since <= V and (until unset or V < until).
 #
 # Example:
-#   graphics/gpu-instancing:
+#   gpu-instancing:
 #     since: "3.0"
 #     doc: https://docs.godotengine.org/en/stable/tutorials/performance/using_multimesh.html
 engine: Godot
-techniques: {}
+techniques:
+  # FastNoiseLite with noise_type TYPE_PERLIN shipped in 4.0; Godot 3.x
+  # offered OpenSimplexNoise (gradient noise, but not Perlin) instead.
+  perlin-noise-terrain:
+    since: "4.0"
+    doc: https://docs.godotengine.org/en/stable/classes/class_fastnoiselite.html

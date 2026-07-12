@@ -5,18 +5,15 @@ okf_version: "0.1"
 # Secret of Games
 
 An LLM wiki of secret game-development techniques, organized as an Open
-Knowledge Format bundle. Each technique is one markdown file under a topic
-directory; every markdown-bearing directory carries its own `index.md`.
+Knowledge Format bundle. Each technique is one markdown file at the bundle
+root — flat, no topic folders — carrying its topic (`graphics`, `ai`,
+`physics`, `optimization`, `design`) in its `tags`.
 
 Primary role: OKF bundle map.
 
-## Topics
+## Techniques
 
-- [Graphics](graphics/index.md) - Rendering, shaders, lighting, and visual-effects tricks.
-- [AI](ai/index.md) - Pathfinding, behavior, and the illusion of intelligence.
-- [Physics](physics/index.md) - Simulation, collision, and stability techniques.
-- [Optimization](optimization/index.md) - Performance, memory, and frame-budget shortcuts.
-- [Design](design/index.md) - Mechanics, feel, and player-perception sleights of hand.
+- [Perlin Noise Terrain](perlin-noise-terrain.md) - Generate natural-looking terrain by sampling layered Perlin noise as a heightmap instead of hand-authoring or using raw randomness.
 
 ## Registry
 

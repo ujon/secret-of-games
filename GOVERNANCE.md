@@ -28,9 +28,8 @@ the shape of the bundle; the agent checks that it is true.
 | `.docs/okf-spec.md` | Format spec | The OKF page/bundle format (vendored reference). |
 | `.docs/llm-wiki.md` | Pattern reference | The living-wiki operating model (vendored reference). |
 | `.docs/technique-template.md` | Page template | Starting shape for a new technique page. |
-| `wiki/index.md` | Bundle map | Catalog of topics and meta docs; carries `okf_version`. |
-| `wiki/<topic>/index.md` | Topic index | Catalog of techniques in that topic. |
-| `wiki/<topic>/<technique>.md` | Technique | One game-development trick. |
+| `wiki/index.md` | Bundle map | Catalog of every page and registry; carries `okf_version`. |
+| `wiki/<technique>.md` | Technique | One game-development trick, its topic carried in `tags`. |
 | `wiki/registry/index.md` | Registry guide | Schemas and rules for the source and platform registries. |
 | `wiki/registry/sources/<slug>.yaml` | Source record | Original link, distilled summary, assets, and the techniques it informs. |
 | `wiki/registry/sources/assets/<slug>/` | Source assets | Photos and clips captured from a source, listed in its record. |

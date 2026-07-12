@@ -8,5 +8,37 @@
 #     definition: >
 #       Swapping a mesh for progressively simpler versions as it recedes
 #       from the camera, trading detail nobody sees for GPU time.
-#     see: [graphics/lod-selection]
-terms: {}
+#     see: [lod-selection]
+terms:
+  gradient noise:
+    definition: >
+      Noise built from pseudo-random gradient vectors on a lattice whose dot
+      products are smoothly interpolated (Perlin, simplex, OpenSimplex) —
+      smooth and band-limited, unlike per-point value/white noise.
+    see: [perlin-noise-terrain]
+  fBm:
+    expansion: fractal Brownian motion
+    definition: >
+      Summing several octaves of noise, each at higher frequency and lower
+      amplitude, so large landforms and fine detail coexist in one field.
+    see: [perlin-noise-terrain]
+  octave:
+    definition: >
+      One layer in an fBm sum; each successive octave roughly doubles the
+      noise frequency and halves its amplitude.
+    see: [perlin-noise-terrain]
+  lacunarity:
+    definition: >
+      The per-octave frequency multiplier in fBm (commonly ~2.0); higher
+      values spread octaves further apart in feature size.
+    see: [perlin-noise-terrain]
+  persistence:
+    definition: >
+      The per-octave amplitude multiplier in fBm (commonly ~0.5); higher
+      values keep fine octaves stronger, making terrain rougher.
+    see: [perlin-noise-terrain]
+  heightmap:
+    definition: >
+      A 2D grid (or function) mapping each (x, z) position to one height —
+      cheap and streamable, but unable to represent caves or overhangs.
+    see: [perlin-noise-terrain]

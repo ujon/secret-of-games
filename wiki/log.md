@@ -10,6 +10,9 @@
 - Folded the data zone into the bundle: registries now live at `wiki/registry/` and the glossary at `wiki/dictionary.yaml`; index freshness exempts data-only directories.
 - Added authorship provenance: every wiki page and source record now stamps the model that wrote it in a `model` field, enforced by the validators.
 - Retired the source-record template; the schema in the registry index is its single source of truth.
+- Ingested the YouTube short "게임에서 지형을 만들 때 쓰는 특수한 수학 기법" (저세상개발자): added [Perlin Noise Terrain](perlin-noise-terrain.md), its source record, Unity/Unreal/Godot support entries, and six glossary terms.
+- Flattened the bundle: technique pages now live directly under `wiki/` with topics carried in `tags`, and the topic directories were retired.
+- Citations now use ordered-list formatting so they render as a list rather than a run-on paragraph.
 
 ## 2026-07-12
 

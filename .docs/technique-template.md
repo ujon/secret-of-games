@@ -9,11 +9,11 @@ timestamp: <YYYY-MM-DDThh:mm:ssZ>
 ---
 
 <!--
-Copy this file into the relevant topic directory under wiki/
-(wiki/graphics/, wiki/ai/, wiki/physics/, wiki/optimization/, wiki/design/)
-and rename it, e.g. wiki/graphics/z-fighting.md. Fill in the frontmatter
-above (only `type` is strictly required by OKF) and the sections below.
-Delete sections that don't apply. See .docs/okf-spec.md for the format.
+Copy this file directly into wiki/ (flat — no topic folders) and rename it,
+e.g. wiki/z-fighting.md. Set the topic (graphics, ai, physics, optimization,
+design) in `tags`. Fill in the frontmatter above (only `type` is strictly
+required by OKF) and the sections below. Delete sections that don't apply.
+See .docs/okf-spec.md for the format.
 
 If Unity, Unreal, or Godot provides this technique, record its version
 support and doc link in the matching wiki/registry/platforms/<engine>.yaml.
@@ -40,8 +40,8 @@ fenced code blocks — over prose.>
 
 # See also
 
-- [<Related concept>](../<topic>/<concept>.md)
+- [<Related concept>](<concept>.md)
 
 # Citations
 
-[1] [<Source>](../registry/sources/<slug>.yaml) - the source record this draws on (or an external URL).
+1. [<Source>](registry/sources/<slug>.yaml) - the source record this draws on (or an external URL).
