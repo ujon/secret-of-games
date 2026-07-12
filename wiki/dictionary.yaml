@@ -1,0 +1,12 @@
+# Glossary of abbreviations and jargon used across the wiki.
+# Every term needs a `definition`; add `expansion` for abbreviations and
+# `see` for related technique ids (path under wiki/ without the .md).
+#
+# Example:
+#   LOD:
+#     expansion: Level of Detail
+#     definition: >
+#       Swapping a mesh for progressively simpler versions as it recedes
+#       from the camera, trading detail nobody sees for GPU time.
+#     see: [graphics/lod-selection]
+terms: {}

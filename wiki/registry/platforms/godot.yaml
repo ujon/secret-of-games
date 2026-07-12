@@ -1,0 +1,10 @@
+# Godot feature-support registry.
+# Maps a technique id (its path under wiki/ without the .md) to support info.
+# Supported in Godot version V when: since <= V and (until unset or V < until).
+#
+# Example:
+#   graphics/gpu-instancing:
+#     since: "3.0"
+#     doc: https://docs.godotengine.org/en/stable/tutorials/performance/using_multimesh.html
+engine: Godot
+techniques: {}

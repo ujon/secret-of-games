@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Obsidian workspace (per-user, not content)
+.obsidian/workspace*.json
+.obsidian/cache
+
+# Node
+node_modules/
+
+# Logs and temp
+*.log
+*.tmp

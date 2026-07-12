@@ -1,0 +1,10 @@
+# Unreal Engine feature-support registry.
+# Maps a technique id (its path under wiki/ without the .md) to support info.
+# Supported in Unreal version V when: since <= V and (until unset or V < until).
+#
+# Example:
+#   graphics/gpu-instancing:
+#     since: "4.22"
+#     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component
+engine: Unreal
+techniques: {}

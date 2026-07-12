@@ -1,0 +1,10 @@
+# Unity feature-support registry.
+# Maps a technique id (its path under wiki/ without the .md) to support info.
+# Supported in Unity version V when: since <= V and (until unset or V < until).
+#
+# Example:
+#   graphics/gpu-instancing:
+#     since: "2018.1"
+#     doc: https://docs.unity3d.com/Manual/GPUInstancing.html
+engine: Unity
+techniques: {}
