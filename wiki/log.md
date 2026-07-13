@@ -2,6 +2,10 @@
 
 ## 2026-07-13
 
+- Research loop 1/3: added [Frustum Culling](frustum-culling.md) (engine docs verified for Unity/Unreal/Godot, registry entries for all three, plus the frustum and occlusion-culling glossary terms).
+- Research loop 2/3: added [Object Pooling](object-pooling.md) — Unity's `ObjectPool<T>` registry entry doc-probe-verified to 2021.1 exactly; Unreal/Godot omitted (no built-in pool); GC glossary term added.
+- Research loop 3/3: added [Level of Detail](level-of-detail.md) with registry entries for all three engines (Unity LODGroup verified to the 4.0 archive) and the LOD and pop glossary terms.
+
 - Every technique now declares where it applies in a `dimensions` field (`2d`, `3d`, or both), shown as a Dim column in the bundle map and enforced by the validators.
 - Captured the Perlin short's captions and verified the page against them (every video claim present; added the Minecraft example); promoted it to `stable` — no drafts remain.
 - Retired the source-record registry: with every source mapping 1:1 to a page and its summary duplicating the page, pages now cite sources directly (title, channel, year, URL) and reverse lookup is a grep; future media assets live under `wiki/assets/<page>/`.

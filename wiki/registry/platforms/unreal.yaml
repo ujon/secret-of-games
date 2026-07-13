@@ -18,3 +18,12 @@ techniques:
   raycast-line-of-sight:
     since: "4.0"
     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/traces-with-raycasts-in-unreal-engine
+  # View-frustum culling is automatic since early UE; doc is the current
+  # visibility guide.
+  frustum-culling:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/visibility-and-occlusion-culling-in-unreal-engine
+  # Static-mesh LODs shipped with early UE4; doc is the current guide.
+  level-of-detail:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-and-using-lods-in-unreal-engine

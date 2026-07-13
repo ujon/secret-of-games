@@ -21,3 +21,12 @@ techniques:
   billboarding:
     since: "4.0"
     doc: https://docs.godotengine.org/en/stable/classes/class_basematerial3d.html
+  # Frustum culling is automatic (and predates 4.0); doc is the current
+  # 3D performance guide.
+  frustum-culling:
+    since: "4.0"
+    doc: https://docs.godotengine.org/en/stable/tutorials/performance/optimizing_3d_performance.html
+  # Automatic mesh LOD arrived with Godot 4.0.
+  level-of-detail:
+    since: "4.0"
+    doc: https://docs.godotengine.org/en/stable/tutorials/3d/mesh_lod.html

@@ -28,13 +28,16 @@ Each entry carries the page's `dimensions` (`2d`, `3d`, or both) and its
 | [Dynamic Difficulty Adjustment](dynamic-difficulty-adjustment.md) | Quietly tune challenge to live performance — adaptive enemies, rubber-band racers, and mercy checkpoints — without telling the player. | `2d` `3d` | `design` `difficulty` `game-feel` |
 | [Easing Functions](easing-functions.md) | Shape motion with curves — smoothstep, smootherstep, bounce, ease-in-out — and ship them as Bézier approximations. | `2d` `3d` | `animation` `math` `easing` |
 | [Elo Matchmaking](elo-matchmaking.md) | Predict win probability from rating gaps and transfer points by surprise, so matchmakers can pair players of equal skill. | `2d` `3d` | `design` `matchmaking` `online` `math` |
+| [Frustum Culling](frustum-culling.md) | Skip rendering everything outside the camera's view volume by testing bounding volumes against the frustum planes — automatic in every major engine. | `3d` | `optimization` `graphics` `rendering` `culling` |
 | [Generous Hitboxes](generous-hitboxes.md) | Bias collision shapes for the player — generous attack boxes, strict-but-delayed enemy boxes, shrunken dodge boxes — and sell hits with hit-stop. | `2d` `3d` | `design` `collision` `game-feel` |
 | [Gerstner Waves](gerstner-waves.md) | Move water-surface points in circles instead of just up-down sine motion to get sharp, natural wave crests. | `3d` | `graphics` `water` `shaders` |
 | [Hitscan Shooting](hitscan-shooting.md) | Judge shots with an instant ray instead of a simulated bullet — and fire that ray from the camera, not the muzzle, with a muzzle-blocked check. | `3d` | `design` `fps` `hitscan` |
 | [Inverse Kinematics](inverse-kinematics.md) | Animate procedurally by choosing where a foot or hand must land and solving the joint chain backwards to reach it. | `2d` `3d` | `animation` `ik` `procedural` `physics` |
 | [Jump Physics via Euler Integration](jump-physics-euler.md) | Step velocity and position frame by frame with designer-chosen gravity — heavier falling than rising — instead of real projectile motion. | `2d` `3d` | `physics` `platformer` `math` |
 | [Lag Compensation](lag-compensation.md) | Judge shots against slightly rewound target positions so players can aim at what they actually see despite network delay. | `2d` `3d` | `netcode` `fps` `multiplayer` |
+| [Level of Detail](level-of-detail.md) | Swap meshes for progressively simpler versions as they shrink on screen, ending in a billboard — spending triangles only where the eye can see them. | `3d` | `optimization` `graphics` `rendering` `lod` |
 | [Mode 7 Affine Transforms](mode-7-affine.md) | Fake 3D by affine-transforming a 2D tilemap per scanline — the Super Famicom trick behind Mario Kart's flat "tracks". | `2d` | `graphics` `classic` `affine` |
+| [Object Pooling](object-pooling.md) | Pre-allocate reusable objects and acquire/release them instead of creating and destroying, trading a little held memory for zero allocation spikes. | `2d` `3d` | `optimization` `memory` `performance` |
 | [Palette-Indexed Graphics](palette-indexed-graphics.md) | Store pixels as small palette indices instead of raw color — 4 bits per pixel, swappable palettes, and the source of retro color identity. | `2d` | `optimization` `classic` `graphics` |
 | [Password Save Systems](password-save-systems.md) | Encode progress into a short code — packed state, a random salt, and a checksum — so cartridges without save memory could still "save". | `2d` `3d` | `classic` `saves` `encoding` |
 | [Perlin Noise Terrain](perlin-noise-terrain.md) | Generate natural-looking terrain by sampling layered Perlin noise as a heightmap instead of hand-authoring or using raw randomness. | `2d` `3d` | `graphics` `procedural-generation` `noise` `terrain` |
@@ -49,6 +52,7 @@ Each entry carries the page's `dimensions` (`2d`, `3d`, or both) and its
 | [Systemic Chemistry Engine](systemic-chemistry-engine.md) | Layer a rule-based state engine over the physics engine — elements act on materials under a few global laws — to get emergent gameplay (BotW). | `2d` `3d` | `design` `systemic` `engine` |
 | [Worley Noise Skies](worley-noise-skies.md) | Fake vast skies with a skybox, then generate realistic clouds by layering Worley noise with Perlin noise. | `3d` | `graphics` `noise` `sky` `clouds` |
 | [Z-Targeting Lock-On](z-targeting-lock-on.md) | One button snaps camera and character to an enemy, remaps movement around the target, and a UI companion teaches the whole system. | `3d` | `design` `camera` `combat` `classic` |
+
 
 ## Registry
 

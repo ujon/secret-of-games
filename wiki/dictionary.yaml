@@ -216,3 +216,30 @@ terms:
       Ocarina of Time's lock-on: one button snaps camera and character to
       an enemy and remaps movement to orbit it.
     see: [z-targeting-lock-on]
+  frustum:
+    definition: >
+      The truncated-pyramid volume a perspective camera can see, bounded
+      by the near and far planes and four side planes.
+    see: [frustum-culling]
+  occlusion culling:
+    definition: >
+      Skipping objects hidden behind other objects — the complement of
+      frustum culling, which only removes what's outside the view.
+    see: [frustum-culling]
+  GC:
+    expansion: garbage collection
+    definition: >
+      Automatic memory reclamation in managed runtimes; its unpredictable
+      pauses show up as frame hitches — the spikes pooling avoids.
+    see: [object-pooling]
+  LOD:
+    expansion: level of detail
+    definition: >
+      Swapping a mesh for progressively simpler versions as it shrinks on
+      screen, trading detail nobody can see for GPU time.
+    see: [level-of-detail]
+  pop:
+    definition: >
+      A visible one-frame switch — an LOD level or impostor swapping in
+      without a blended transition.
+    see: [level-of-detail]

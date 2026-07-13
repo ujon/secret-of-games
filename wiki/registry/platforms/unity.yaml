@@ -20,3 +20,17 @@ techniques:
   billboarding:
     since: "5.6"
     doc: https://docs.unity3d.com/ScriptReference/BillboardRenderer.html
+  # Automatic camera culling — earliest probed doc archive is 4.6; the
+  # feature long predates it.
+  frustum-culling:
+    since: "4.6"
+    doc: https://docs.unity3d.com/Manual/UnderstandingFrustum.html
+  # UnityEngine.Pool.ObjectPool<T> — doc-probe verified: absent in 2020.3,
+  # present from 2021.1.
+  object-pooling:
+    since: "2021.1"
+    doc: https://docs.unity3d.com/ScriptReference/Pool.ObjectPool_1.html
+  # LODGroup — earliest hosted doc archive is 4.0; may predate it.
+  level-of-detail:
+    since: "4.0"
+    doc: https://docs.unity3d.com/ScriptReference/LODGroup.html
