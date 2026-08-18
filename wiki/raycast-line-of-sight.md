@@ -47,6 +47,7 @@ The same primitive stretches surprisingly far:
 
 - [A* Pathfinding](astar-pathfinding.md) - what the AI does after the ray says "seen".
 - [Hitscan Shooting](hitscan-shooting.md) - the same instant ray, repurposed as a bullet.
+- [Spatial Audio Physics](spatial-audio-physics.md) - the same probe asking whether a sound is blocked.
 
 # Citations
 

@@ -40,6 +40,7 @@ character never shifts within the frame.
 
 # See also
 
+- [Camera Framing and Look-Ahead](camera-framing-lookahead.md) - where the camera should be heading, which this smoothing then travels to.
 - [Easing Functions](easing-functions.md) - the curve family this smoothing belongs to.
 - [Z-Targeting Lock-On](z-targeting-lock-on.md) - the camera taking over aiming entirely.
 

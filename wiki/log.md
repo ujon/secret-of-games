@@ -1,5 +1,12 @@
 # Update Log
 
+## 2026-08-18
+
+- Ingested the six 저세상개발자 shorts published since the 2026-07-13 catalog pass (channel re-checked in full: 48 shorts listed, 33 already cited, the rest previously excluded as off-topic). New pages, newest short first: [Voxel Terrain](voxel-terrain.md), [Spatial Audio Physics](spatial-audio-physics.md), [Camera Framing and Look-Ahead](camera-framing-lookahead.md), [Landmark-Guided Level Design](landmark-guided-level-design.md), [Adaptive Music](adaptive-music.md), [Normal Mapping](normal-mapping.md) — all written from captured captions, so all `stable`.
+- Followed each short's own cited sources rather than stopping at the video: the GDC 2024 "Tunes of the Kingdom" talk (captions captured) supplied verified detail on air absorption, automatically computed reverb, and Tears of the Kingdom's informed search for sound paths *through its terrain voxels* — which is what links Spatial Audio Physics to both [Voxel Terrain](voxel-terrain.md) and [A* Pathfinding](astar-pathfinding.md). Also verified the Dead Cells normal-map pipeline (Thomas Vasseur, 2018), the CEDEC 2026 Donkey Kong Bananza voxel session report, Minecraft's chunk dimensions, and the two GDC camera talks (2015 side-scroller cameras, 2023 Kirby).
+- Engine support recorded after doc probes: normal mapping in all three engines (Unity 4.0 archive, Unreal current guide, Godot 3.0 `SpatialMaterial`), spatial audio physics in all three (Unity 4.0 `dopplerLevel`/reverb zones, Unreal 5.0 Sound Attenuation, Godot 3.0 `doppler_tracking`), and look-ahead framing in Unity 2018.1 (Cinemachine `Lookahead Time`, minimum Unity version confirmed via the package registry). Voxel terrain and adaptive music got no entries — neither is a built-in feature in any of the three engines; both pages say so explicitly.
+- Added 18 glossary terms (voxel, chunk, dual contouring, normal/bump map, tangent space, air absorption, Doppler shift, reverb, sound occlusion, adaptive music, vertical layering, horizontal re-sequencing, stinger, look-ahead camera, landmark, pinch point) and cross-linked the new pages into eight existing ones, including a `See also` section for [Perlin Noise Terrain](perlin-noise-terrain.md), which had none.
+
 ## 2026-07-13
 
 - Research loop 1/3: added [Frustum Culling](frustum-culling.md) (engine docs verified for Unity/Unreal/Godot, registry entries for all three, plus the frustum and occlusion-culling glossary terms).

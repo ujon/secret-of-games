@@ -27,3 +27,13 @@ techniques:
   level-of-detail:
     since: "4.0"
     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-and-using-lods-in-unreal-engine
+  # Normal maps are a core material input since early UE4; doc is current.
+  normal-mapping:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/normal-maps-in-unreal-engine
+  # Sound Attenuation carries air absorption, occlusion, and reverb send.
+  # UE4 shipped attenuation too, but its archived docs are unreachable
+  # (403), so 5.0 is the earliest version verified from Epic's docs.
+  spatial-audio-physics:
+    since: "5.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/sound-attenuation-in-unreal-engine

@@ -42,6 +42,7 @@ path at once.
 # See also
 
 - [Raycast Line of Sight](raycast-line-of-sight.md) - the perception check that usually triggers the chase.
+- [Spatial Audio Physics](spatial-audio-physics.md) - informed search applied to sound paths instead of footpaths.
 
 # Citations
 

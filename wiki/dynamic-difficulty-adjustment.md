@@ -38,6 +38,7 @@ Measure performance and adjust in real time, invisibly:
 
 # See also
 
+- [Adaptive Music](adaptive-music.md) - the same read-the-player instinct, applied to the score instead of the rules.
 - [Elo Matchmaking](elo-matchmaking.md) - multiplayer's version: pick fairer opponents instead of bending the rules.
 - [Risk-Reward Design](risk-reward-design.md) - letting players choose their own difficulty moment to moment.
 

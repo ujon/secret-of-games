@@ -42,6 +42,7 @@ the other two variants. Modern games still billboard distant objects
 
 - [Mode 7 Affine Transforms](mode-7-affine.md) - the 2D-era sibling illusion of 3D.
 - [Blend Modes](blend-modes.md) - how billboarded particles composite into light and smoke.
+- [Normal Mapping](normal-mapping.md) - faking surface detail rather than surface presence.
 
 # Citations
 

@@ -44,6 +44,7 @@ Ship the structure, randomize the flesh:
 
 # See also
 
+- [Landmark-Guided Level Design](landmark-guided-level-design.md) - the hand-authored guidance a generator has to reproduce.
 - [Perlin Noise Terrain](perlin-noise-terrain.md) - continuous procedural generation, for terrain rather than rooms.
 - [PRNG Seed Manipulation](prng-seed-manipulation.md) - why a dungeon's randomness is reproducible from its seed.
 

@@ -34,3 +34,19 @@ techniques:
   level-of-detail:
     since: "4.0"
     doc: https://docs.unity3d.com/ScriptReference/LODGroup.html
+  # Normal maps — doc-probe verified in the 4.0 archive as "How do I Use
+  # Normal Maps?" (HOWTO-bumpmap.html); the feature predates the archive.
+  normal-mapping:
+    since: "4.0"
+    doc: https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html
+  # AudioSource.dopplerLevel and Reverb Zones both verified in the 4.0
+  # archive; the Audio Low Pass Filter used for occlusion was Pro-only then.
+  spatial-audio-physics:
+    since: "4.0"
+    doc: https://docs.unity3d.com/Manual/class-AudioSource.html
+  # Cinemachine package: `Lookahead Time` on the Framing Transposer, renamed
+  # Position Composer in Cinemachine 3.x. Earliest documented package (2.2)
+  # declares Unity 2018.1 as its minimum in the Unity package registry.
+  camera-framing-lookahead:
+    since: "2018.1"
+    doc: https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachinePositionComposer.html

@@ -243,3 +243,90 @@ terms:
       A visible one-frame switch — an LOD level or impostor swapping in
       without a blended transition.
     see: [level-of-detail]
+  voxel:
+    definition: >
+      One cell of a 3D grid — the volumetric counterpart of a pixel —
+      holding a material, a density, or gameplay data for that coordinate.
+    see: [voxel-terrain]
+  chunk:
+    definition: >
+      A fixed block of adjacent voxels treated as the unit of meshing,
+      streaming, and culling (Minecraft: a 16×16 column of the world).
+    see: [voxel-terrain]
+  dual contouring:
+    definition: >
+      Isosurface extraction that places one vertex inside each cell of a
+      density field and joins neighbors, yielding smooth carvable surfaces
+      instead of cubes.
+    see: [voxel-terrain]
+  normal map:
+    definition: >
+      A texture storing the surface direction per texel (XYZ packed as RGB)
+      so lighting varies across a flat polygon or sprite.
+    see: [normal-mapping]
+  tangent space:
+    definition: >
+      The per-texel coordinate frame (tangent, bitangent, normal) a normal
+      map is expressed in, so one map stays valid as the surface moves.
+    see: [normal-mapping]
+  bump map:
+    definition: >
+      The single-channel ancestor of the normal map: stores height and lets
+      the shader derive slope, rather than storing direction outright.
+    see: [normal-mapping]
+  air absorption:
+    definition: >
+      Frequency-dependent loss over distance — high frequencies fade
+      faster than low — which is why far-off sounds are dull, not just
+      quiet.
+    see: [spatial-audio-physics]
+  Doppler shift:
+    definition: >
+      The pitch change from relative motion between source and listener:
+      up while approaching, down while receding.
+    see: [spatial-audio-physics]
+  reverb:
+    definition: >
+      The dense tail of reflections an enclosed space adds to a sound;
+      its length and color describe the room's size and materials.
+    see: [spatial-audio-physics]
+  sound occlusion:
+    definition: >
+      Attenuating and muffling a sound whose path to the listener is
+      blocked by geometry — the audio counterpart of occlusion culling.
+    see: [spatial-audio-physics]
+  adaptive music:
+    definition: >
+      Music written for game state rather than a timeline, so it changes
+      with events instead of looping past them.
+    see: [adaptive-music]
+  vertical layering:
+    definition: >
+      Adding and removing instrument layers of one piece on a shared clock
+      as events escalate; also called vertical remixing.
+    see: [adaptive-music]
+  horizontal re-sequencing:
+    definition: >
+      Assembling music from interchangeable phrases that can follow one
+      another in any order, so the loop and its transitions stay musical.
+    see: [adaptive-music]
+  stinger:
+    definition: >
+      A short transition cue played over a state change to cover the seam
+      before the next theme starts.
+    see: [adaptive-music]
+  look-ahead camera:
+    definition: >
+      A camera offset in the direction of travel, so the player sees more
+      of what is coming than of what they crossed.
+    see: [camera-framing-lookahead]
+  landmark:
+    definition: >
+      A structure legible from far off that a player navigates by, doing
+      the work a waypoint marker otherwise does.
+    see: [landmark-guided-level-design]
+  pinch point:
+    definition: >
+      A place where branching routes are made to recombine, so a level
+      stays buildable and testable despite offering choices.
+    see: [landmark-guided-level-design]

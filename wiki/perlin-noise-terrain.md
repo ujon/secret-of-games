@@ -86,6 +86,11 @@ Godot   FastNoiseLite.get_noise_2d(x, y)         # noise_type = TYPE_PERLIN
   ship-quality terrain usually post-processes it (hydraulic/thermal
   erosion) or blends authored content on top.
 
+# See also
+
+- [Voxel Terrain](voxel-terrain.md) - the volumetric alternative when the world has to overhang, or change while players play.
+- [Worley Noise Skies](worley-noise-skies.md) - the same noise toolkit, layered for clouds instead of ground.
+
 # Citations
 
 1. [게임에서 지형을 만들 때 쓰는 특수한 수학 기법 — 저세상개발자, 2026](https://www.youtube.com/shorts/kY9TYQYxCZM) - the short this page is drawn from, verified against its captions.

@@ -30,3 +30,14 @@ techniques:
   level-of-detail:
     since: "4.0"
     doc: https://docs.godotengine.org/en/stable/tutorials/3d/mesh_lod.html
+  # SpatialMaterial's normal_enabled/normal_texture/normal_scale verified in
+  # the 3.0 docs; 4.x renamed it StandardMaterial3D and added CanvasTexture
+  # for 2D normal maps.
+  normal-mapping:
+    since: "3.0"
+    doc: https://docs.godotengine.org/en/stable/tutorials/3d/standard_material_3d.html
+  # doppler_tracking and attenuation_filter_cutoff_hz both verified in the
+  # 3.0 class docs; reverb comes from AudioEffectReverb on a bus.
+  spatial-audio-physics:
+    since: "3.0"
+    doc: https://docs.godotengine.org/en/stable/classes/class_audiostreamplayer3d.html

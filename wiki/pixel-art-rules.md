@@ -39,6 +39,7 @@ motion — beauty required rules, not just talent.
 # See also
 
 - [Palette-Indexed Graphics](palette-indexed-graphics.md) - the hardware constraint these rules grew around.
+- [Normal Mapping](normal-mapping.md) - how modern 2D games light that flat art per pixel.
 
 # Citations
 
