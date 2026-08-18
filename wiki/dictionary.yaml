@@ -295,10 +295,32 @@ terms:
       Attenuating and muffling a sound whose path to the listener is
       blocked by geometry — the audio counterpart of occlusion culling.
     see: [spatial-audio-physics]
+  procedural audio:
+    definition: >
+      Sound produced at runtime from parameters — layers assembled or
+      samples synthesized on demand — instead of played back from a
+      recording made for that one object.
+    see: [procedural-sound-effects]
+  modal synthesis:
+    definition: >
+      Synthesizing an impact or ring as a small set of damped resonances
+      whose frequencies and decay come from the object's material and size.
+    see: [procedural-sound-effects]
+  granular synthesis:
+    definition: >
+      Building continuous sound (rolling, scraping) from rapidly repeated
+      short grains whose rate and pitch follow a driving parameter such as
+      contact speed.
+    see: [procedural-sound-effects]
   adaptive music:
     definition: >
       Music written for game state rather than a timeline, so it changes
       with events instead of looping past them.
+    see: [adaptive-music]
+  stem:
+    definition: >
+      One separately mixed layer of a piece of music, kept as its own track
+      so it can be faded in or out independently.
     see: [adaptive-music]
   vertical layering:
     definition: >

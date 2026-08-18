@@ -91,6 +91,7 @@ if blocked(source, listener):
 - [Raycast Line of Sight](raycast-line-of-sight.md) - the same visibility probe, reused to decide whether sound is blocked.
 - [A* Pathfinding](astar-pathfinding.md) - the informed search that finds a sound's way around geometry.
 - [Voxel Terrain](voxel-terrain.md) - the grid Tears of the Kingdom searches those paths through.
+- [Procedural Sound Effects](procedural-sound-effects.md) - where the sounds this page places in space can come from in the first place.
 - [Adaptive Music](adaptive-music.md) - the score's half of the same audio system.
 - [Hitscan Shooting](hitscan-shooting.md) - the camera-versus-character split, on the shooting side.
 

@@ -50,3 +50,9 @@ techniques:
   camera-framing-lookahead:
     since: "2018.1"
     doc: https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachinePositionComposer.html
+  # AudioClip.Create with a PCM reader callback — script-side sample
+  # generation, verified in the 4.0 archive. Unity ships no node-based
+  # procedural audio graph; DSP hooks are OnAudioFilterRead and this.
+  procedural-sound-effects:
+    since: "4.0"
+    doc: https://docs.unity3d.com/ScriptReference/AudioClip.Create.html

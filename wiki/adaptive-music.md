@@ -84,14 +84,18 @@ on state_change: schedule(stinger, at = next_beat); schedule(battle_theme, after
   to be mixed as a set, not individually.
 - **Variety versus memorability** — randomized phrase order fights the
   hook that makes a theme stick.
-- **No engine ships it** — the platform registry has no entry for this
-  page: engines provide the plumbing (Unreal's MetaSounds, Unity's mixer
-  snapshots), while the layering and re-sequencing systems themselves
-  come from middleware such as FMOD or Wwise, or from in-house tools.
+- **Engine support is uneven** — Godot ships both halves as resources
+  (`AudioStreamInteractive` for clip transitions, with a filler clip
+  standing in for the stinger, and `AudioStreamSynchronized` for stacked
+  layers) since 4.3. Unity and Unreal provide only plumbing — mixer
+  snapshots, MetaSounds graphs — so the layering and re-sequencing system
+  itself comes from middleware such as FMOD or Wwise, or from an in-house
+  tool like the one Nintendo built.
 
 # See also
 
 - [Spatial Audio Physics](spatial-audio-physics.md) - the same audio system's other half, applied to sound effects.
+- [Procedural Sound Effects](procedural-sound-effects.md) - runtime assembly applied to effects instead of to the score.
 - [Dynamic Difficulty Adjustment](dynamic-difficulty-adjustment.md) - the same instinct in mechanics: read the player's state and respond quietly.
 - [Easing Functions](easing-functions.md) - the curves layer fades and crossfades ride on.
 

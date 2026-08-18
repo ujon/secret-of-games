@@ -44,6 +44,7 @@ prototype before building the game on it.
 
 # See also
 
+- [Procedural Sound Effects](procedural-sound-effects.md) - the sequel's audio team applying the same doctrine: rules that make sound, not authored sounds.
 - [Risk-Reward Design](risk-reward-design.md) - designing incentives inside such emergent systems.
 
 # Citations

@@ -51,6 +51,7 @@ dozen lines by hand.
 # See also
 
 - [Frustum Culling](frustum-culling.md) - the rendering-side sibling: spend the frame budget only where it matters.
+- [Procedural Sound Effects](procedural-sound-effects.md) - audio voices as a pooled resource, for the same reason bullets are.
 
 # Citations
 

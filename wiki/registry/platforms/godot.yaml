@@ -41,3 +41,15 @@ techniques:
   spatial-audio-physics:
     since: "3.0"
     doc: https://docs.godotengine.org/en/stable/classes/class_audiostreamplayer3d.html
+  # AudioStreamGenerator (push generated PCM frames from script) — doc-probe
+  # verified: absent in 3.0, present from 3.1. Godot 4.x adds
+  # AudioStreamPolyphonic (4.0) for assembling layers at runtime.
+  procedural-sound-effects:
+    since: "3.1"
+    doc: https://docs.godotengine.org/en/stable/classes/class_audiostreamgenerator.html
+  # AudioStreamInteractive (clip transitions, with a filler clip serving as
+  # the stinger) and AudioStreamSynchronized (stacked layers) — doc-probe
+  # verified: both absent in 4.2, present from 4.3.
+  adaptive-music:
+    since: "4.3"
+    doc: https://docs.godotengine.org/en/stable/classes/class_audiostreaminteractive.html

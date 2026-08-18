@@ -37,3 +37,8 @@ techniques:
   spatial-audio-physics:
     since: "5.0"
     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/sound-attenuation-in-unreal-engine
+  # MetaSounds — UE5's node-based DSP graph with runtime parameter inputs,
+  # production-ready in 5.0 as the successor to Sound Cues.
+  procedural-sound-effects:
+    since: "5.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/metasounds-the-next-generation-sound-sources-in-unreal-engine
