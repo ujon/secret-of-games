@@ -42,3 +42,15 @@ techniques:
   procedural-sound-effects:
     since: "5.0"
     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/metasounds-the-next-generation-sound-sources-in-unreal-engine
+  # SpringArmComponent is a core UE4 camera boom; it retracts its children
+  # when ProbeSize/ProbeChannel detect a collision.
+  camera-collision-avoidance:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/unreal-engine/API/Runtime/Engine/USpringArmComponent
+  # Custom Depth with the Custom Stencil scene texture can distinguish
+  # occluded actors in a post-process material. Epic rendering staff
+  # documented it as a new 4.9 feature in September 2015:
+  # https://forums.unrealengine.com/t/customstencil-usage-in-pp-material/331247
+  occluder-reveal-effects:
+    since: "4.9"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/post-process-materials?application_version=4.27

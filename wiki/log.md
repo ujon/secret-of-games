@@ -1,5 +1,11 @@
 # Update Log
 
+## 2026-08-20
+
+- Researched how games handle structures that block or contain the camera and filed the answer as three stable techniques: [Camera Collision and Obstacle Avoidance](camera-collision-avoidance.md), [Occluder Reveal Effects](occluder-reveal-effects.md), and [Interior Camera Zones](interior-camera-zones.md).
+- Verified the response ladder against primary sources: *Kingdoms of Amalur: Reckoning*'s sticky collision beam, *Tomb Raider*'s deliberate short occlusions and level-triggered cameras, *Bombernauts*' local outlined cutaway, and *Every Day We Fight*'s transparent wall and active-floor system, plus current engine documentation.
+- Recorded built-in camera collision support for Unity (Cinemachine, minimum Unity 2017.1), Unreal (Spring Arm, UE 4.0), and Godot (SpringArm, 3.1); added Unreal 4.9 Custom Depth/Stencil support for occluded silhouettes and eighteen camera/visibility glossary terms. The same official Cinemachine 2.1 manual corrected the stale Unity minimum for [Camera Framing and Look-Ahead](camera-framing-lookahead.md) from 2018.1 to 2017.1.
+
 ## 2026-08-18
 
 - Ingested the six 저세상개발자 shorts published since the 2026-07-13 catalog pass (channel re-checked in full: 48 shorts listed, 33 already cited, the rest previously excluded as off-topic). New pages, newest short first: [Voxel Terrain](voxel-terrain.md), [Spatial Audio Physics](spatial-audio-physics.md), [Camera Framing and Look-Ahead](camera-framing-lookahead.md), [Landmark-Guided Level Design](landmark-guided-level-design.md), [Adaptive Music](adaptive-music.md), [Normal Mapping](normal-mapping.md) — all written from captured captions, so all `stable`.

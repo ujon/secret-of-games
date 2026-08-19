@@ -45,10 +45,10 @@ techniques:
     since: "4.0"
     doc: https://docs.unity3d.com/Manual/class-AudioSource.html
   # Cinemachine package: `Lookahead Time` on the Framing Transposer, renamed
-  # Position Composer in Cinemachine 3.x. Earliest documented package (2.2)
-  # declares Unity 2018.1 as its minimum in the Unity package registry.
+  # Position Composer in Cinemachine 3.x. Cinemachine 2.1 documents the
+  # property and declares compatibility with Unity 2017.1 and later.
   camera-framing-lookahead:
-    since: "2018.1"
+    since: "2017.1"
     doc: https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachinePositionComposer.html
   # AudioClip.Create with a PCM reader callback — script-side sample
   # generation, verified in the 4.0 archive. Unity ships no node-based
@@ -56,3 +56,10 @@ techniques:
   procedural-sound-effects:
     since: "4.0"
     doc: https://docs.unity3d.com/ScriptReference/AudioClip.Create.html
+  # Cinemachine 2.1 documents Collision Avoidance and declares compatibility
+  # with Unity 2017.1 and later. Cinemachine 3.x splits the current behavior
+  # between Deoccluder, Decollider, and the collision resolver built into
+  # Third Person Follow.
+  camera-collision-avoidance:
+    since: "2017.1"
+    doc: https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachineColliderConfiner.html

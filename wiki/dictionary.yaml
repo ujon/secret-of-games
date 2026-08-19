@@ -352,3 +352,99 @@ terms:
       A place where branching routes are made to recombine, so a level
       stays buildable and testable despite offering choices.
     see: [landmark-guided-level-design]
+  spring arm:
+    definition: >
+      A camera boom from a target pivot to the desired lens position whose
+      usable length retracts when a collision probe finds geometry.
+    see: [camera-collision-avoidance]
+  camera pivot:
+    definition: >
+      The tracking point a camera rig rotates or extends around, commonly
+      placed near the followed character's torso or head rather than at the
+      lens itself.
+    see: [camera-collision-avoidance, interior-camera-zones]
+  shape cast:
+    definition: >
+      Sweeping a sphere, capsule, box, or other collision volume through
+      space and reporting what it would hit, unlike a zero-width raycast.
+    see: [camera-collision-avoidance]
+  collision mask:
+    definition: >
+      A bit set selecting which physics layers a query or body can hit, used
+      to make camera probes ignore the followed character, foliage, and
+      other nonblocking geometry.
+    see: [camera-collision-avoidance, occluder-reveal-effects]
+  damping:
+    definition: >
+      Smoothing a changing value over time so it approaches its target
+      instead of snapping there in one frame.
+    see: [camera-smoothing-deadzone, camera-collision-avoidance, occluder-reveal-effects]
+  yaw:
+    definition: >
+      Rotation left or right around the current up axis, distinct from
+      looking up or down.
+    see: [camera-collision-avoidance]
+  parallax:
+    definition: >
+      The apparent shift between near and far objects as the viewpoint moves;
+      changing camera position can therefore change where an aim ray appears
+      relative to the world.
+    see: [billboarding, camera-collision-avoidance, normal-mapping]
+  near plane:
+    definition: >
+      The closest rectangular boundary of a camera frustum; geometry that
+      intersects it appears sliced open even when the lens point is clear.
+    see: [camera-collision-avoidance, frustum-culling]
+  camera occluder:
+    definition: >
+      A wall, roof, prop, or other rendered object between the camera and a
+      subject the game has decided must remain visible.
+    see: [occluder-reveal-effects]
+  dithered transparency:
+    definition: >
+      Faking partial transparency by discarding a changing pattern of opaque
+      pixels, avoiding full alpha sorting at the cost of stipple or ghosting.
+    see: [occluder-reveal-effects]
+  alpha clipping:
+    definition: >
+      Discarding fragments whose opacity falls below a threshold so the
+      survivors can remain depth-writing opaque or masked pixels instead of
+      using sorted translucent blending.
+    see: [occluder-reveal-effects]
+  temporal anti-aliasing:
+    definition: >
+      Smoothing edges by combining jittered samples from several frames;
+      useful for dithered fades but liable to leave trails on moving patterns.
+    see: [occluder-reveal-effects]
+  cutaway:
+    definition: >
+      Removing a local piece of a blocking surface, or a whole roof or upper
+      floor, so an otherwise hidden interior stays readable.
+    see: [occluder-reveal-effects, interior-camera-zones]
+  camera zone:
+    definition: >
+      An authored area that overrides camera distance, angle, framing, or
+      visibility rules according to the subject, lens, or selected focus's
+      relationship to a particular space.
+    see: [interior-camera-zones, camera-framing-lookahead]
+  portal:
+    definition: >
+      A modeled connection such as a door, window, or opening between two
+      rooms, used to determine when spatial or camera ownership transfers.
+    see: [interior-camera-zones]
+  hysteresis:
+    definition: >
+      Using different enter and exit thresholds, or a hold time, so a system
+      does not flicker between two states at one boundary.
+    see: [interior-camera-zones, camera-collision-avoidance, level-of-detail]
+  FOV:
+    expansion: field of view
+    definition: >
+      The angular width of the world visible through a camera; changing it
+      alters both how much fits on screen and the apparent perspective.
+    see: [interior-camera-zones]
+  control reference frame:
+    definition: >
+      The orientation that maps stick directions to world or character
+      movement; a camera crossing sides can change what "forward" means.
+    see: [interior-camera-zones, camera-collision-avoidance]

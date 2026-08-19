@@ -46,7 +46,9 @@ The same primitive stretches surprisingly far:
 # See also
 
 - [A* Pathfinding](astar-pathfinding.md) - what the AI does after the ray says "seen".
+- [Camera Collision and Obstacle Avoidance](camera-collision-avoidance.md) - widening a sightline ray into a camera-sized collision sweep.
 - [Hitscan Shooting](hitscan-shooting.md) - the same instant ray, repurposed as a bullet.
+- [Occluder Reveal Effects](occluder-reveal-effects.md) - using camera-to-subject hits to change only the blocking renderers.
 - [Spatial Audio Physics](spatial-audio-physics.md) - the same probe asking whether a sound is blocked.
 
 # Citations

@@ -52,6 +52,7 @@ so the craft lies in what the automation can't decide:
 # See also
 
 - [Billboarding](billboarding.md) - the companion trick for what survives culling but sits far away.
+- [Occluder Reveal Effects](occluder-reveal-effects.md) - intentionally revealing a hidden subject, separate from performance culling.
 - [Voxel Terrain](voxel-terrain.md) - chunking as a way to make a huge world cullable in pieces.
 
 # Citations

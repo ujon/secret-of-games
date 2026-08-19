@@ -77,6 +77,7 @@ if zone.contains(character): camera = zone.framing   # locked, biased, or free
 # See also
 
 - [Camera Smoothing and Deadzone](camera-smoothing-deadzone.md) - how the camera travels to the position this page chooses.
+- [Interior Camera Zones](interior-camera-zones.md) - room and tunnel volumes as authored framing overrides.
 - [Z-Targeting Lock-On](z-targeting-lock-on.md) - handing framing to a target instead of to travel direction.
 - [Landmark-Guided Level Design](landmark-guided-level-design.md) - the level's half of the same job: telling the player where to look.
 
