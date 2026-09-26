@@ -20,7 +20,8 @@ has to change too.
 # Technique
 
 Model the physical phenomena that act on sound between source and
-listener. Five that games implement:
+listener. The source Short introduces the following phenomena; engine
+documentation supplies the corresponding audio controls. [1, 3, 4, 5]
 
 | Phenomenon | Physics | In game |
 | --- | --- | --- |
@@ -36,19 +37,19 @@ four. *Tears of the Kingdom* is the worked example:
 - **Excess attenuation** — with only inverse-distance diffusion, a
   rooster's crow stays audible for ~100 km. Adding frequency-dependent
   air absorption pulls the audible range back to something believable;
-  the team tuned which frequencies get filtered and from what distance.
+  the team tuned which frequencies get filtered and from what distance. [2]
 - **Automatic reverb** — hand-tuning reverb parameters per space did not
   scale, so the game collects room capacity (direction and distance to
   nearby walls) plus each wall material's absorption rate and derives the
-  parameters from a reverberation-time equation instead.
+  parameters from a reverberation-time equation instead. [2]
 - **Path-searched occlusion** — the listener sits at the camera, but the
   game searches for a *sound path* from the source to the player
   character, using an informed search over the terrain's voxel grid.
   Stepping behind a wall changes what you hear; so does opening a door,
-  because the path itself changed.
+  because the path itself changed. [2]
 - **One rule set, one knob** — every sound is assigned a real loudness,
   and the same acoustic rules then place a quiet heart container and a
-  distant storm cloud correctly without per-sound special cases.
+  distant storm cloud correctly without per-sound special cases. [2]
 
 A cheaper alternative to filtering, still widely used: author a
 close-mic and a distant version of the sound and crossfade them by
@@ -76,12 +77,12 @@ if blocked(source, listener):
   player cannot localize is worse than an unrealistic clear one.
 - **Doppler artifacts** — pitch-shifting looping sources at high relative
   speed warbles; most engines expose a doppler *scale* precisely so it
-  can be dialed below reality.
+  can be dialed below reality. [3]
 - **Occlusion costs a query per source per update** — ray probes or path
   searches multiply by voice count; budget it, stagger it, and cache it.
 - **Listener at the camera, judgment at the character** — the same split
   that creates the head glitch in shooting: what you hear and where you
-  stand are not the same point.
+  stand are not the same point. [2]
 - **Reverb needs the space described** — automatic parameters demand
   material and geometry data the level actually carries; without it, you
   are back to hand-placed reverb zones.

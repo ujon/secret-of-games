@@ -22,22 +22,22 @@ Treat camera *position* as authored content, not as a follow constraint.
 **Look-ahead offset.** Shift the camera in the direction of travel so the
 character sits behind screen center and the view extends forward. Scale
 the offset with how much warning the player needs — faster movement and
-denser hazards justify a larger push.
+denser hazards justify a larger push. [1, 2]
 
 **Handle the turnaround.** When the character reverses, the offset has to
 move to the other side. Doing it immediately makes a tapped direction
 change slosh the whole frame, so *Super Mario World* waits: the camera
 re-frames only once the character has actually committed to travelling
-the new way.
+the new way. [1, 2]
 
 **Lock the camera on purpose.** A camera that always follows leaks
 information and reacts when it shouldn't:
 
 | Situation | Camera behavior | What the player reads |
 | --- | --- | --- |
-| Secret room off the main path | Don't follow in — reveal it only once the player enters (Metroidvanias such as *Hollow Knight: Silksong*) | The room is a discovery, not a spoiler |
-| Hazard the player must dodge | Bias framing toward the obstacle (*Kirby and the Forgotten Land*) | The threat, and the gap in it, are both on screen |
-| Edge of traversable space | Stop following at the boundary | "There is nothing further this way" — no UI required |
+| Secret room off the main path | Don't follow in — reveal it only once the player enters (Metroidvanias such as *Hollow Knight: Silksong*) [1] | The room is a discovery, not a spoiler |
+| Hazard the player must dodge | Bias framing toward the obstacle (*Kirby and the Forgotten Land*) [1, 3] | The threat, and the gap in it, are both on screen |
+| Edge of traversable space | Stop following at the boundary [1] | "There is nothing further this way" — no UI required |
 
 The through-line: the camera is how the game says *look here* and *not
 yet*, and it says it without text.
@@ -64,7 +64,7 @@ if zone.contains(character): camera = zone.framing   # locked, biased, or free
 - **Look-ahead and smoothing compound** — an offset that flips instantly
   plus a lazy follow reads as overshoot. Delay the flip (Mario World) or
   smooth the *prediction* itself; engines expose a lookahead-smoothing
-  knob for exactly this.
+  knob for exactly this. [2, 4]
 - **Big offsets cost precision** — the same push that helps a runner see
   hazards pulls the character off-center during melee or platform-perfect
   jumps. Vary it by state instead of picking one global value.

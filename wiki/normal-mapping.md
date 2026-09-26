@@ -5,23 +5,22 @@ description: Store a surface direction per texel so light varies across a flat s
 tags: [graphics, shaders, lighting]
 dimensions: [2d, 3d]
 status: stable
-model: claude-opus-5
-timestamp: 2026-08-18T11:40:00Z
+model: gpt-6
+timestamp: 2026-09-26T08:26:19Z
 ---
 
 # Problem
 
-Move a light across a flat surface and nothing happens. Every pixel of a
-2D sprite receives light the same way, and every pixel of a flat polygon
-shares one geometric normal, so both stay evenly lit — the light moves
-and the image reads as paper. Modeling the real bumps instead costs
-triangles nobody can afford on every brick and rivet.
+A flat polygon or sprite lacks the surface-direction changes of individual
+bricks, creases, and rivets. Lighting can vary across it, but cannot reveal
+those missing bumps from geometry alone. Modeling every small feature adds
+triangles that a normal map can often replace. [4]
 
 # Technique
 
 Ship a second texture — the **normal map** — that stores, per texel, the
 direction the surface *pretends* to face. Lighting then samples that
-direction instead of the polygon's own:
+direction instead of the polygon's own: [1, 4]
 
 1. **Encode** the normal's XYZ into RGB, in **tangent space** (relative
    to the surface, so the map moves with the object and can be reused
@@ -36,19 +35,21 @@ Two payoffs, one technique:
 
 - **3D** — a flat polygon carries the shading of a high-poly model. Bake
   detail from the dense mesh into the map once and render the cheap mesh
-  forever.
+  forever. [4, 5]
 - **2D** — a sprite with a matching normal map lights per pixel. *Dead
   Cells* built its animation from 3D models rendered small and without
   antialiasing, exporting every frame as a `.png` *plus* its normal map,
   and rendered the volume with a toon shader reading that map — flat
-  pixel art that still has form.
+  pixel art that still has form. [2]
 
 A **bump (height) map** is the older sibling: one channel of height, from
 which the shader derives a slope. A normal map stores the direction
 outright — more data, no derivation, and it can express directions a
-height field can't.
+height field can't. [3, 4]
 
 # Examples
+
+The RGB decoding and flat-normal convention follow Unity's explanation: [4]
 
 ```text
 # tangent-space normal map: [0,1] texture → [-1,1] vector
@@ -62,19 +63,21 @@ lit = max(dot(n_w, L), 0.0) * light_color
 # Trade-offs
 
 - **The silhouette never changes** — bumps are a lighting lie, so edges
-  stay flat and grazing angles give it away. Parallax occlusion mapping
-  or real displacement is the fix, at real cost.
+  stay flat and grazing angles give it away. Changing the actual outline
+  requires changing geometry; shader height mapping adds apparent depth
+  without adding that geometry. [4, 6]
 - **No self-shadowing or occlusion** — a normal-mapped wall's "bricks"
   cast nothing onto each other.
 - **Convention mismatches** — the green channel's sign differs between
-  toolchains (OpenGL vs DirectX handedness); engines expose an invert-Y
-  switch because assets arrive both ways.
+  toolchains (OpenGL-style versus DirectX-style normal maps). Convert the
+  Y component to the convention the engine expects. [4, 6]
 - **Tangents must match the baker** — mismatched tangent bases or hard
   UV seams show up as visible facets and seam lines.
-- **Cost is memory and bandwidth**, not geometry — a second texture per
-  material, and normal maps compress worse than color.
-- **Useless without moving light** — under a single baked ambient light
-  the map buys nothing.
+- **Cost includes memory and bandwidth** — the additional texture must be
+  stored and sampled; channel packing and compression vary by engine. [6]
+- **The shader must use the normals** — stationary directional lighting can
+  reveal their detail too. An unshaded material that ignores lighting gains
+  no normal-based shading. [4, 6]
 
 # See also
 
@@ -91,4 +94,4 @@ lit = max(dot(n_w, L), 0.0) * light_color
 3. [Normal Map vs Bump Map — TextureMap.app](https://texturemap.app/blog/normal-map-vs-bump-map) - the short's cited source for the height-vs-direction distinction.
 4. [Unity — Introduction to normal maps (bump mapping)](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html) - engine support and authoring notes.
 5. [Unreal — Normal Maps](https://dev.epicgames.com/documentation/en-us/unreal-engine/normal-maps-in-unreal-engine) - engine support and material usage.
-6. [Godot — Standard Material 3D](https://docs.godotengine.org/en/stable/tutorials/3d/standard_material_3d.html) - normal-map parameters, including the invert-Y switch.
+6. [Godot — Standard Material 3D](https://docs.godotengine.org/en/stable/tutorials/3d/standard_material_3d.html) - normal-map channels and coordinate convention, height mapping, and unshaded materials.

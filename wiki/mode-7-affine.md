@@ -19,12 +19,12 @@ and F-Zero needed a driving view with depth, turning, and speed.
 The console's **Mode 7** applies an **affine transform** to an entire
 background tile layer: adding to coordinates translates, multiplying
 scales, and matrix terms rotate or shear. Chrono Trigger's clock
-animation is the same feature used scenically.
+animation is the same feature used scenically. [1]
 
 The 3D illusion comes from the display itself: a CRT draws **one
 scanline at a time**, and the game changes the scale factor *per
 scanline* — lower lines (near) magnified, upper lines (far) shrunk. A
-flat, rotated tilemap becomes a receding ground plane.
+flat, rotated tilemap becomes a receding ground plane. [1]
 
 ```text
 per scanline y:
@@ -33,7 +33,7 @@ per scanline y:
 ```
 
 Consequence: every Mario Kart course is *perfectly flat* — hills are
-paint, because the "track" is a picture.
+paint, because the "track" is a picture. [1]
 
 # Trade-offs
 

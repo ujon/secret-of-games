@@ -14,14 +14,14 @@ timestamp: 2026-07-12T16:18:00Z
 The entry-level ocean — a sum of sines with varied amplitude and
 frequency over a 3D surface (The Wind Waker's stylized sea) — is
 convincingly wavy but always *round*: pure vertical displacement cannot
-form the sharp crests of real water.
+form the sharp crests of real water. [1]
 
 # Technique
 
 **Gerstner waves** displace each surface point in a *circle* — horizontal
 sway plus vertical rise — so points bunch at crests (sharpening them) and
 spread in troughs. Sum several Gerstner waves of different directions,
-wavelengths, and amplitudes for a natural sea.
+wavelengths, and amplitudes for a natural sea. [1]
 
 ```text
 # one Gerstner wave at position x, time t (simplified 2D section)

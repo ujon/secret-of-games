@@ -19,7 +19,7 @@ scene beneath.
 # Technique
 
 Treat color channels as numbers (black = 0, white = 1) and pick the
-arithmetic per effect:
+arithmetic per effect: [1]
 
 - **Additive** — `result = base + effect`. Only brightens, like light;
   the backdrop shines through. The default for glows, lasers, fire, and

@@ -17,7 +17,7 @@ graze kills them, the game feels rigged.
 
 # Technique
 
-Bias every asymmetry toward the player:
+Bias every asymmetry toward the player: [1]
 
 - **Generous player attacks, strict enemy attacks** — the player's
   attack box is larger than the animation; the enemy's is smaller.

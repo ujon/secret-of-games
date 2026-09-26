@@ -5,8 +5,8 @@ description: One button snaps camera and character to an enemy, remaps movement 
 tags: [design, camera, combat, classic]
 dimensions: [3d]
 status: stable
-model: claude-fable-5
-timestamp: 2026-07-12T16:18:00Z
+model: gpt-6
+timestamp: 2026-09-26T08:27:22Z
 ---
 
 # Problem
@@ -17,18 +17,18 @@ player before any swordplay began.
 
 # Technique
 
-Ocarina of Time's **Z-targeting**, the first built-in "aim assist" and
-the template for all lock-on systems since:
+Ocarina of Time's **Z-targeting** combines camera control, facing, and
+target-relative movement to make 3D combat easier to read. [1, 2]
 
-- **One-button lock** — Z snaps the camera and character to face the
-  nearest enemy; pressing again cycles to the next target.
+- **One-button lock** — Z focuses the camera and character on a selected
+  target so attacks can be directed toward it. [1, 2]
 - **Movement remap** — while locked, forward/back approach and retreat,
   left/right become circle-strafing around the target; the character
-  keeps facing the enemy through it all.
+  keeps facing the enemy through it all. [1, 2]
 - **Teach it with a companion** — the fairy Navi was invented to
   communicate the system: she hovers over the current target, changes
   color by target type, and surfaces contextual information. Radical
-  mechanics shipped with a built-in tutor.
+  mechanics shipped with a built-in tutor. [1, 3]
 
 # Trade-offs
 
@@ -45,3 +45,5 @@ the template for all lock-on systems since:
 # Citations
 
 1. [세계 최초로 에임핵을 도입한 게임 — 저세상개발자, 2025](https://www.youtube.com/shorts/OjbUm_hnYFU) - the short this page is drawn from.
+2. [Iwata Asks: Ocarina of Time 3D — A Sword & Sorcery Tale Admired Worldwide — Nintendo, 2011](https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-The-Legend-of-Zelda-Ocarina-of-Time-3D/Vol-5-Mr-Shigeru-Miyamoto/5-A-Sword-Sorcery-Tale-Admired-Worldwide/5-A-Sword-Sorcery-Tale-Admired-Worldwide-224778.html) - developers explain locking the viewpoint and moving in an arc relative to the opponent; this supports the mechanism, not a claim of first-ever aim assistance.
+3. [Iwata Asks: Ocarina of Time 3D — Original Development Staff, Part 1, Page 4 — Nintendo, 2011](https://iwataasks.nintendo.com/interviews/3ds/zelda-ocarina-of-time/1/3/) - Koizumi explains turning the target marker into a fairy and naming the Fairy Navigation System Navi.

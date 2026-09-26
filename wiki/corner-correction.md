@@ -21,17 +21,17 @@ When a moving character overlaps a corner by a small margin, **shift them
 sideways (or up) just enough to clear it** and let the motion continue:
 
 - Jump grazing a ceiling corner → nudge horizontally, jump proceeds.
-- Dash hitting a ledge lip → pop up onto the platform.
+- Dash hitting a ledge lip → pop up onto the platform. [1]
 
 Sibling leniencies from the same family:
 
 - **Early wall-jump** — register the wall jump slightly before the wall
   is touched.
 - **Momentum grace** — jumping right after a moving platform stops still
-  inherits its last velocity for extra distance.
+  inherits its last velocity for extra distance. [1]
 
 Super Mario has corner correction; speedrunners exploit it for faster
-routes.
+routes. [1]
 
 # Trade-offs
 

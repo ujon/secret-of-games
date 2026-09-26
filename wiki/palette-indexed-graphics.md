@@ -1,12 +1,12 @@
 ---
 type: Technique
 title: Palette-Indexed Graphics
-description: Store pixels as small palette indices instead of raw color — 4 bits per pixel, swappable palettes, and the source of retro color identity.
+description: Store pixels as small palette indices instead of raw color, reducing image data and enabling palette swaps.
 tags: [optimization, classic, graphics]
 dimensions: [2d]
 status: stable
-model: claude-fable-5
-timestamp: 2026-07-12T16:18:00Z
+model: gpt-6
+timestamp: 2026-09-26T08:30:11Z
 ---
 
 # Problem
@@ -20,12 +20,13 @@ background.
 Exploit how few colors sprites actually use:
 
 1. **Index, don't store** — assign each distinct color a small number.
-   Mario's sprite uses 13 colors → 4 bits per pixel suffices (16 max).
+   In the short's Mario sprite example, 13 colors fit in a four-bit index
+   (16 possible values). [1]
 2. **Palette table** — store the actual colors once, separately; pixels
-   reference entries. The Super Famicom stored graphics as up-to-16-value
-   indices plus palettes.
+   reference entries. This four-bit example selects from at most 16 palette
+   entries; that is not a limit on every Super Famicom graphics format.
 3. **Palette swap** — rebind the same pixel data to different palettes
-   for enemies' color variants, player 2, status effects — free variety.
+   for enemies' color variants, player 2, status effects — free variety. [1]
 4. **Global budgets** — caps on concurrent sprites and palettes kept RAM
    flat, which is why that era's games share such a distinctive,
    coherent color feel.

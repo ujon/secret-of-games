@@ -29,18 +29,18 @@ authored room state rather than a cast.
 2. **Collect the relevant blockers between subject and camera.** Use the
    engine's multi-hit or repeated query and include a lens-volume overlap
    test: APIs differ on hit ordering, whether they stop at the first solid
-   hit, and whether they report a collider containing the query origin. Map
-   triangle/collider hits to logical wall, roof, or foliage sections small
+   hit, and whether they report a collider containing the query origin. [6, 7]
+   Map triangle/collider hits to logical wall, roof, or foliage sections small
    enough to reveal without deleting a whole building.
 3. **Choose a reveal mode that preserves the information the game needs.**
 
 | Mode | What remains readable | Best fit |
 | --- | --- | --- |
-| Alpha fade | A ghost of the blocking surface and everything behind it | A small number of modular blockers |
+| Alpha fade | A ghost of the blocking surface and everything behind it | A small number of modular blockers [2, 3] |
 | Dithered/masked fade | Depth-tested fragments when implemented as an alpha-clipped, depth-writing pass | Opaque or masked rendering pipelines |
-| Local cutaway | A hole around the subject while the wall outline remains | Dense structures and terrain |
-| X-ray silhouette | The blocker stays solid; the subject is overlaid through it | Tactical targets and short occlusions |
-| Whole-part hide | Clean interior with no roof or upper floors | Modular rooms and fixed/isometric views |
+| Local cutaway | A hole around the subject while the wall outline remains | Dense structures and terrain [1] |
+| X-ray silhouette | The blocker stays solid; the subject is overlaid through it | Tactical targets and short occlusions [3, 4] |
+| Whole-part hide | Clean interior with no roof or upper floors | Modular rooms and fixed/isometric views [2] |
 
 4. **Delay both directions.** Reveal quickly after a meaningful occlusion,
    then restore more slowly and only after the blocker has stayed clear. Ease
@@ -49,7 +49,7 @@ authored room state rather than a cast.
 5. **Keep rendering and gameplay separate.** A faded wall normally remains
    solid. If the player must click through it, route selection rays around the
    revealed part or move it off the click-query channel, as *Every Day We
-   Fight* does.
+   Fight* does. [2]
 6. **Track and render state per camera.** Split-screen cameras may disagree
    about which wall is a blocker; a global material swap reveals information
    to both. Feed a view-specific mask or render pass instead of mutating one
@@ -62,7 +62,7 @@ only when player and camera lie on opposite sides of an authored planar face.
 CPU-generated outline tiles are exempt from the crop, so convex outlines
 remain visible and the missing terrain's shape stays readable. Arbitrary
 smoothed or normal-mapped surface normals cannot be substituted safely for
-those consistent face directions.
+those consistent face directions. [1]
 
 In a layered 2D game, the same timing and per-view state can fade foreground
 sprites or tilemap layers selected by overlap and draw order; the 3D face-side

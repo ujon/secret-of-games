@@ -24,12 +24,12 @@ character never shifts within the frame.
   camera += (target - camera) * 0.1   # per tick
   ```
 
-  Far away it rushes, close up it feathers in — an ease-out for free.
+  Far away it rushes, close up it feathers in — an ease-out for free. [1]
 - **Slower vertical follow** — lag the y-axis more than x, so jumps read
-  as the character rising within the frame rather than the world dropping.
+  as the character rising within the frame rather than the world dropping. [1]
 - **Deadzone** — define a box around the character in which the camera
   does not move at all; it follows only when the character pushes past
-  the edge. Small wiggles stop shaking the world.
+  the edge. Small wiggles stop shaking the world. [1]
 
 # Trade-offs
 

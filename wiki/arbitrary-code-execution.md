@@ -27,12 +27,12 @@ just binary.
    it as instructions.
 3. **Controller state is data too** — so from that moment, button
    combinations are code the player is typing. This is arbitrary code
-   execution (ACE).
+   execution (ACE). [1]
 
 Assembly/C-era games managed memory by hand, so such corruptions were
 easy to create. Tool-assisted speedrunners chain them into full payload
 injection — in the extreme, robots wired to multiple controllers "type"
-entire programs into a running game.
+entire programs into a running game. [1]
 
 # Notes
 

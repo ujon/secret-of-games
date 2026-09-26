@@ -5,8 +5,8 @@ description: Predict win probability from rating gaps and transfer points by sur
 tags: [design, matchmaking, online, math]
 dimensions: [2d, 3d]
 status: stable
-model: claude-fable-5
-timestamp: 2026-07-12T16:18:00Z
+model: gpt-6
+timestamp: 2026-09-26T08:27:21Z
 ---
 
 # Problem
@@ -19,15 +19,16 @@ other, but perfect matches take forever to queue.
 
 Matchmakers juggle **queue time, region/ping, and a skill score**. The
 classic score is the **Elo rating** (from chess; used by early League of
-Legends, refined in Rainbow Six):
+Legends, refined in Rainbow Six): [1]
 
 - The rating *gap* predicts win probability — being +100 predicts ~64%,
-  +400 predicts ~91%.
-- After the match, points transfer in proportion to the *surprise*: a 75%
-  favorite gains little for winning (+5), loses more for a draw (−5) and
-  the most for losing (−15).
+  +400 predicts ~91%. [1]
+- After the match, points transfer in proportion to the *surprise*. In the
+  short's illustrative case, a 75% favorite gains 5 points for winning,
+  loses 5 for a draw, and loses 15 for a defeat; these are example updates,
+  not fixed Elo point changes. [1]
 
-Modern refinements:
+The short also describes refinements used in some matchmaking systems: [1]
 
 - Formulas are kept secret to resist manipulation.
 - **Uncertainty scaling** — new/erratic players' ratings move fast;
@@ -49,4 +50,4 @@ Modern refinements:
 
 # Citations
 
-1. [게임 상대를 결정하는 매칭 시스템의 원리 — 저세상개발자, 2026](https://www.youtube.com/shorts/uMCwH38GpuY) - the short this page is drawn from.
+1. [게임 상대를 결정하는 매칭 시스템의 원리 — 저세상개발자, 2026](https://www.youtube.com/shorts/uMCwH38GpuY) - Korean auto-captions rechecked on 2026-09-26; rating-gap probabilities, conditional point-update examples, uncertainty, and squad matching.

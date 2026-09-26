@@ -19,7 +19,8 @@ player tries next.
 # Technique
 
 Breath of the Wild pairs its physics engine (motion, collision) with a
-**chemistry engine** that owns *state*:
+**chemistry engine** that owns *state*. The source Short describes its
+element/material categories and three interaction rules as follows. [1]
 
 - **Elements** — intangibles: fire, water, ice, electricity, wind.
 - **Materials** — tangibles: wood, rock, metal, the player.
@@ -33,7 +34,7 @@ Three global laws replace per-case scripts:
 Every object is then just tagged with material/element properties, and
 all interactions — cooking, wildfire, conductive shocks — *emerge* from
 the same three rules. The team validated the concept with a small
-prototype before building the game on it.
+prototype before building the game on it. [1]
 
 # Trade-offs
 

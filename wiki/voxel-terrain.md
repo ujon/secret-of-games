@@ -20,18 +20,18 @@ every change forces a re-mesh.
 
 A **voxel** is to 3D space what a pixel is to a 2D screen: one cell of a
 regular grid. Store the world as a grid of them and terrain becomes data
-you can write to.
+you can write to. [1]
 
 Two ways to turn that grid into a surface:
 
 | Flavor | Per-voxel data | Surface | Look |
 | --- | --- | --- | --- |
-| Cubic | Which material occupies the cell | The cell's own faces | Blocky (Minecraft) |
-| Density field | A signed density value | Isosurface extracted per cell — **dual contouring** places one vertex inside each cell and joins neighbors | Smooth, carvable (Donkey Kong Bananza) |
+| Cubic [1] | Which material occupies the cell | The cell's own faces | Blocky (Minecraft) |
+| Density field [2] | A signed density value | Isosurface extracted per cell — **dual contouring** places one vertex inside each cell and joins neighbors | Smooth, carvable (Donkey Kong Bananza) |
 
 Density fields buy more than looks: *Bananza* rounds off dug terrain
 instead of leaving stair-steps, and blends the boundary where voxels of
-different materials meet.
+different materials meet. [2]
 
 Voxel grids are expensive, so two optimizations are structural rather
 than optional:
@@ -40,15 +40,15 @@ than optional:
    chunk as the unit of meshing, streaming, and culling. Minecraft uses a
    16×16 column spanning the full world height (384 blocks in the modern
    Overworld), subdivided into 16-block sections, and loads only the
-   chunks it needs.
+   chunks it needs. [3]
 2. **Hidden-face rejection** — never emit a face between two solid
    voxels. Only faces touching air can be seen, which removes the vast
-   interior of any solid region.
+   interior of any solid region. [1]
 
 Voxels also make a convenient place to hang non-visual data. *Tears of
 the Kingdom* stores terrain facts per voxel — whether the coordinate is
 indoors, whether it is near the water surface, whether Ascend works
-there — and its audio system searches sound paths through the same grid.
+there — and its audio system searches sound paths through the same grid. [4]
 
 # Examples
 

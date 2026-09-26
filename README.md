@@ -36,8 +36,10 @@ YAML frontmatter, one technique per file, kept flat at the bundle root
 with topics carried as `tags`. [`wiki/index.md`](wiki/index.md) is the
 bundle map cataloging every page.
 
-Sources are cited directly in each page's Citations (title, channel,
-year, URL). Structured records travel inside the bundle as YAML:
+Sourced passages carry inline references to each page's numbered
+Citations (title, channel or author, year, URL). Reserved index and log
+files follow OKF's separate formatting rules. Structured records travel
+inside the bundle as YAML:
 [`wiki/registry/`](wiki/registry/index.md) tracks which techniques Unity,
 Unreal, and Godot provide — by version, with doc links — and
 `wiki/dictionary.yaml` defines the abbreviations and jargon the pages

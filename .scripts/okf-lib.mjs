@@ -40,6 +40,17 @@ export function parseFrontmatter(content) {
   return { hasBlock: true, malformed: false, data };
 }
 
+// Topic tags are a local Technique rule, not a restriction on OKF types.
+export function validateTechniqueTopic(data) {
+  if (data?.type !== 'Technique') return [];
+  const topics = new Set(['graphics', 'ai', 'physics', 'optimization', 'design']);
+  const tags = (data.tags ?? '').replace(/^\[|\]$/g, '').split(',')
+    .map((tag) => tag.trim().replace(/^["'](.*)["']$/, '$1'));
+  return tags.some((tag) => topics.has(tag)) ? [] : [
+    'Technique must include a topic tag: graphics, ai, physics, optimization, or design.',
+  ];
+}
+
 // Strip fenced and inline code so example links inside backticks aren't checked.
 export function stripCode(md) {
   return md.replace(/```[\s\S]*?```/g, '').replace(/`[^`]*`/g, '');

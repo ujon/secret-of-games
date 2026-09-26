@@ -18,6 +18,8 @@ path at once.
 
 # Technique
 
+The short outlines a progression from individual routes to shared fields: [1]
+
 1. **Graph the world** — partition terrain into regions (grid cells,
    waypoints, or navmesh polygons) and connect neighbors into a graph.
 2. **Dijkstra** — expand outward from the start, always processing the

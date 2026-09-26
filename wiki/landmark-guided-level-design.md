@@ -21,23 +21,23 @@ to say where to go.
 **Give the main route a destination you can see from outside it.** Design
 a path whose direction is obvious on sight, and put a **landmark** at the
 end of it that is legible from far away. The player then navigates by
-that landmark instead of by instructions.
+that landmark instead of by instructions. [1]
 
 *Breath of the Wild* makes its landmarks self-announcing: stables trail
 smoke from a chimney, towers glow. They are also placed so that following
 a road *runs into them* — spotting one from a distance and arriving are
-the same action.
+the same action. [1, 2]
 
 **Bait the side routes.** Alternate paths get their own lures — treasure,
 or a monster strong enough to be interesting. *Super Mario Odyssey* uses
 Power Moons: visible from almost anywhere, and collecting the ones you can
-see walks you along the detour the designer laid out.
+see walks you along the detour the designer laid out. [1]
 
 **Merge the branches at pinch points.** Every branch multiplies what has
 to be built, balanced, and tested, so the paths are made to recombine.
 Odyssey's Bowser's Kingdom is a chain of islands where crossing to the
 next one runs through a single connection, so each island's branching
-narrows back to one path before the next island opens up.
+narrows back to one path before the next island opens up. [1]
 
 The pattern, in order:
 

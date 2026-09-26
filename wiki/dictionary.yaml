@@ -13,8 +13,8 @@ terms:
   gradient noise:
     definition: >
       Noise built from pseudo-random gradient vectors on a lattice whose dot
-      products are smoothly interpolated (Perlin, simplex, OpenSimplex) —
-      smooth and band-limited, unlike per-point value/white noise.
+      products are smoothly interpolated (Perlin, simplex, OpenSimplex),
+      producing a spatially correlated field rather than independent samples.
     see: [perlin-noise-terrain]
   fBm:
     expansion: fractal Brownian motion
@@ -59,13 +59,18 @@ terms:
     see: [gerstner-waves]
   lag compensation:
     definition: >
-      Server-side rewind: judging a shot against where the target was when
-      the shooter saw them, canceling network delay.
+      Server-side rewind that judges a shot against the target's historical
+      position at the estimated time shown in the shooter's view.
+    see: [lag-compensation]
+  client view interpolation:
+    definition: >
+      Rendering remote objects between buffered server updates to smooth
+      motion, introducing a viewing delay that lag compensation must account for.
     see: [lag-compensation]
   rollback netcode:
     definition: >
-      Netcode that plays local input instantly and lets remote clients skip
-      or fast-forward missed frames when late input arrives.
+      Netcode that applies local input immediately and predicts missing remote
+      inputs, then restores a saved state and re-simulates when late inputs disagree.
     see: [rollback-netcode]
   hitscan:
     definition: >
@@ -146,6 +151,12 @@ terms:
       A precomputed best-direction-per-region map toward one goal that
       many agents can follow without individual path searches.
     see: [astar-pathfinding]
+  BSP:
+    expansion: binary space partitioning
+    definition: >
+      Recursive division of space into two regions at each node of a tree,
+      used to organize visibility and traversal of geometry.
+    see: [raycast-line-of-sight]
   IK:
     expansion: inverse kinematics
     definition: >
@@ -187,18 +198,19 @@ terms:
     expansion: pseudo-random distribution
     definition: >
       Variable per-try odds that grow after each miss and reset on
-      success, keeping the advertised average without streaks.
+      success, calibrated to an overall success rate while reducing extreme
+      failure streaks.
     see: [pity-timers-and-prd]
   PRNG:
     expansion: pseudo-random number generator
     definition: >
-      A deterministic sequence of random-looking numbers grown from a
-      seed; same seed, same "luck".
+      A generator of deterministic, random-looking numbers; the same initial
+      state and call sequence reproduce the same values.
     see: [prng-seed-manipulation]
   seed:
     definition: >
-      The initial value that determines a PRNG's entire output sequence —
-      and therefore every "random" outcome derived from it.
+      A value used to initialize a PRNG's state. Reproducing game outcomes
+      also requires matching the relevant game state and order of random calls.
     see: [prng-seed-manipulation]
   checksum:
     definition: >
@@ -237,8 +249,9 @@ terms:
   GC:
     expansion: garbage collection
     definition: >
-      Automatic memory reclamation in managed runtimes; its unpredictable
-      pauses show up as frame hitches — the spikes pooling avoids.
+      Automatic memory reclamation in managed runtimes. Collection work can
+      cause frame hitches; pooling can reduce allocation pressure but does not
+      eliminate every collection or pause.
     see: [object-pooling]
   LOD:
     expansion: level of detail

@@ -13,8 +13,5 @@ jobs:
         with:
           node-version: "22"
       # Zero dependencies — the validators use only the Node standard library.
-      - run: node .scripts/validate-okf.mjs
-      - run: node .scripts/validate-links.mjs
-      - run: node .scripts/validate-index.mjs
-      - run: node .scripts/validate-platforms.mjs
-      - run: node .scripts/validate-dictionary.mjs
+      - run: npm test
+      - run: npm run validate

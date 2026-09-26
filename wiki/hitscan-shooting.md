@@ -20,13 +20,13 @@ worst at close range — so perfectly centered shots can miss.
 
 - **Hitscan** — skip the projectile: trace an instant ray along the aim
   and apply the hit immediately. Fast and simple; standard in Rainbow
-  Six, Overwatch, and most precision shooters.
+  Six, Overwatch, and most precision shooters. [1]
 - **Camera-origin ray** — fire the judgment ray from the camera so hits
-  land exactly on the crosshair, which is what players expect.
+  land exactly on the crosshair, which is what players expect. [1]
 - **Muzzle-blocked check** — camera-origin creates the **head glitch**:
   behind low cover the camera can see (and kill) while the shooter's gun
   and body stay unhittable. Fix: judge from the camera, but *fail the
-  shot if the muzzle's path is blocked*.
+  shot if the muzzle's path is blocked*. [1]
 
 # Trade-offs
 

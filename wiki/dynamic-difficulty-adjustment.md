@@ -17,7 +17,7 @@ changes during play.
 
 # Technique
 
-Measure performance and adjust in real time, invisibly:
+Measure performance and adjust in real time, invisibly: [1]
 
 - **Adaptive difficulty** — Resident Evil 2 tunes enemy strength to the
   player's level on the fly, keeping players in flow (never bored, never

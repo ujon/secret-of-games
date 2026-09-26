@@ -5,8 +5,8 @@ description: Score the game state instead of a timeline — stack instrument lay
 tags: [audio, music, design]
 dimensions: [2d, 3d]
 status: stable
-model: claude-opus-5
-timestamp: 2026-08-18T11:40:00Z
+model: gpt-6
+timestamp: 2026-09-26T08:27:21Z
 ---
 
 # Problem
@@ -19,7 +19,7 @@ information the player can act on.
 # Technique
 
 **Adaptive music** composes for state transitions rather than for a fixed
-running order. Two complementary structures:
+running order. Two complementary structures: [1]
 
 **Vertical layering** — one piece, recorded as separable layers, with
 events adding and removing them:
@@ -33,7 +33,7 @@ events adding and removing them:
 
 *Pikmin 2* layers its cave themes this way: the main theme alone while
 exploring, timpani when enemies close in, bass drum and cymbals once the
-fight starts. Tension rises without a cut.
+fight starts. Tension rises without a cut. [1, 2]
 
 **Horizontal re-sequencing** — one timeline, assembled from
 interchangeable pieces:
@@ -48,14 +48,14 @@ interchangeable pieces:
 
 *Octopath Traveler* builds its pre-boss music as a loop designed for this:
 whenever the fight actually begins, the jump to the battle theme sounds
-intended.
+intended. [1]
 
 The tooling matters as much as the composition. For *Tears of the
 Kingdom*, Nintendo built an editor for graphically wiring how music
 transitions — connecting notes — so transitions are designed while the
 music is being written, not patched in afterwards. That game also plays
 instrumental music *in the game space* like a sound effect, so a
-performance echoes off nearby walls.
+performance echoes off nearby walls. [3]
 
 # Examples
 
@@ -84,13 +84,11 @@ on state_change: schedule(stinger, at = next_beat); schedule(battle_theme, after
   to be mixed as a set, not individually.
 - **Variety versus memorability** — randomized phrase order fights the
   hook that makes a theme stick.
-- **Engine support is uneven** — Godot ships both halves as resources
+- **Check the engine's music tools** — Godot ships both halves as resources
   (`AudioStreamInteractive` for clip transitions, with a filler clip
   standing in for the stinger, and `AudioStreamSynchronized` for stacked
-  layers) since 4.3. Unity and Unreal provide only plumbing — mixer
-  snapshots, MetaSounds graphs — so the layering and re-sequencing system
-  itself comes from middleware such as FMOD or Wwise, or from an in-house
-  tool like the one Nintendo built.
+  layers) since 4.3. [4, 5, 6] The transition rules and musical material
+  still need to be authored for the game.
 
 # See also
 
@@ -104,3 +102,6 @@ on state_change: schedule(stinger, at = next_beat); schedule(battle_theme, after
 1. [게임 음악에 사용되는 신기한 전환 기법 — 저세상개발자, 2026](https://www.youtube.com/shorts/WkvlFYUlvns) - the short this page is drawn from, verified against its captions.
 2. [Pikmin 2 OST — Bulblax Kingdom Transcription — olimar12345, 2021](https://youtu.be/cci60OjC6yU) - the short's cited source for the layered cave theme.
 3. [Tunes of the Kingdom: Evolving Physics and Sounds for 'The Legend of Zelda: Tears of the Kingdom' — GDC, 2024](https://youtu.be/N-dPDsLTrTE) - the transition-authoring tool and music placed in the game space, verified against the talk's captions.
+4. [Godot 4.3: Interactive music — Godot Engine contributors, 2024](https://godotengine.org/releases/4.3/) - introduction of the interactive, playlist, and synchronized audio resources.
+5. [AudioStreamInteractive — Godot Engine contributors, 4.3 documentation, 2024](https://docs.godotengine.org/en/4.3/classes/class_audiostreaminteractive.html) - clip transitions, beat/bar scheduling, and optional filler clips.
+6. [AudioStreamSynchronized — Godot Engine contributors, 4.3 documentation, 2024](https://docs.godotengine.org/en/4.3/classes/class_audiostreamsynchronized.html) - synchronized sub-streams with per-stream volume controls.

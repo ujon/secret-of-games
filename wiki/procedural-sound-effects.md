@@ -28,21 +28,22 @@ Author the system that makes sound, not the sounds.
    shaking of a wooden bed, plus the chains holding that bed together. A
    paddle boat is water displaced by rotating wheels, plus wooden boards
    fighting the water's resistance. *Tears of the Kingdom* used no
-   recording of a real wagon at all.
+   recording of a real wagon at all. [1]
 2. **Drive the layers from the physics that already exists.** A system
    watches how the rigid bodies under the physics engine are going to
-   move and picks the sound from their **size and material**.
+   move and picks the sound from their **size and material**. [1]
 3. **Require no bespoke playback code.** Because the rule reads physics
    rather than object identity, things sound right without an
    implementation of their own: a Flux Construct's geometric shuffling, a
    hook sliding down a rail, and suspension bridges — which are nothing
    but physics, with no suspension-bridge program anywhere — creak and
-   wobble on their own.
+   wobble on their own. [1]
 4. **Hand the result to the global acoustic rules.** Generated sounds get
    the same assigned loudness as authored ones and are then placed in
    space by the usual distance, absorption, reverb, and occlusion pass.
 
-The mapping is the design work:
+The mapping is the design work. Illustrative mappings for a custom
+system, rather than a specification of Nintendo's implementation:
 
 | Physics input | Drives |
 | --- | --- |
@@ -55,15 +56,17 @@ The mapping is the design work:
 Layering recorded components is one end of a spectrum; **synthesizing**
 them is the other — modal synthesis for impacts (a handful of damped
 resonances scaled by material and size) and granular synthesis for
-continuous contact, where grain rate follows speed and pressure. Engines
-supply the machinery at both ends: Unreal's MetaSounds is a DSP graph
-with runtime parameter inputs, while Unity and Godot let a script write
-PCM frames directly.
+continuous contact, where grain rate follows speed and pressure.
+
+Engines supply the output machinery: Unreal's MetaSounds is a DSP graph
+with runtime parameter inputs. [2] Unity's AudioClip.Create accepts a
+PCM reader callback, and Godot's AudioStreamGenerator accepts generated
+frames from script. [3, 4]
 
 Nintendo's own summary of the result is the clearest statement of the
 technique: rather than creating every sound in the game, the sound team
 created a system that *makes* it sound that way — which the director
-described as, in effect, a physics engine for sound.
+described as, in effect, a physics engine for sound. [1]
 
 # Examples
 
@@ -96,7 +99,7 @@ on_contact(a, b, impulse, rel_velocity):
 - **You tune curves, not takes** — one wrong mapping mis-sounds the whole
   game at once, and the failures are hard to reproduce. ToTK's designers
   reported high-quality sounds they had no memory of creating; that is the
-  upside and the QA problem in a single sentence.
+  upside and the QA problem in a single sentence. [1]
 - **Physics jitter becomes audio jitter** — resting bodies generate
   micro-collisions that machine-gun an impact layer. Impulse thresholds,
   debouncing, and hysteresis on loop start/stop are mandatory.

@@ -19,14 +19,14 @@ textures (Minecraft-style thickened quads) read as stylized, not real.
 
 1. **Skybox** — wrap the world in a cube textured with sky imagery.
    Rendered without depth, it never gets closer, so players mistake it for
-   distance.
+   distance. [1]
 2. **Worley noise for clouds** — scatter random feature points in a grid
    and color every position by the distance to its nearest point. The
    result is a cellular, cauliflower-like pattern that matches cumulus
-   cloud structure.
+   cloud structure. [1]
 3. **Layer and mix** — overlap several Worley layers of different scales,
    then blend with [Perlin noise](perlin-noise-terrain.md) for wispy
-   detail. Animate by scrolling the noise domain over time.
+   detail. Animate by scrolling the noise domain over time. [1]
 
 # Trade-offs
 

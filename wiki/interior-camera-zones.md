@@ -25,7 +25,7 @@ camera policy.
 1. **Author a zone per camera-relevant space.** A room, tunnel, stairwell,
    or floor carries a camera profile: spring-arm length, tracking-target
    height, FOV, vertical angle limits, left/right shoulder offset, and
-   whether manual orbit is allowed.
+   whether manual orbit is allowed. [1, 2]
 2. **Track subject space and lens space separately.** At a doorway they can
    be on opposite sides. Record directed portal crossings and travel
    direction, then let an authored transfer rule decide which space owns the
@@ -36,18 +36,18 @@ camera policy.
    use an intermediate shot, cut, or synchronize an occluder reveal. Check
    collision on every sampled pose. When camera orientation changes, blend
    or temporarily retain the previous control reference so "forward" does
-   not reverse under the player.
+   not reverse under the player. [1, 2, 4]
 4. **Give architectural visibility its own focus.** Depending on the genre,
    this may be the player, selected unit, cursor-targeted room, or lens space.
    Hide the focused room's roof; in a multi-storey building, the policy may
-   render the selected floor and those below while fading floors above. When
-   the same portal event changes camera and visibility, synchronize their
+   render the selected floor and those below while fading floors above. [3]
+   When the same portal event changes camera and visibility, synchronize their
    transitions; otherwise give visibility its own timing. Do not assume both
    share one owner. Keep exterior walls that still describe the building
    footprint.
 5. **Give zones priority and hysteresis.** A crawlspace can override a room,
-   which overrides the outdoor default. An exit margin or short delay stops
-   rapid mode changes while standing in a threshold.
+   which overrides the outdoor default. [1, 4] An exit margin or short delay
+   stops rapid mode changes while standing in a threshold.
 6. **Keep collision safety active.** The zone chooses a shot that should fit;
    the spring arm still handles furniture, doors, and unexpected moving
    blockers.
@@ -138,7 +138,7 @@ camera.pose = resolve_camera_collision(requested)
 - **Valid endpoints do not imply a valid path** — a parameter blend can pass
   through a doorframe or ceiling. Test intermediate poses and provide a rail,
   intermediate shot, cut, or reveal fallback rather than relying on a late
-  collision clamp to rescue the transition.
+  collision clamp to rescue the transition. [1]
 - **Roof hiding can expose unfinished world shells** — interior art, sky,
   shadows, reflections, and audio must tolerate the roof's visual absence.
 - **Multi-floor rules need a clear owner** — player floor, selected unit,

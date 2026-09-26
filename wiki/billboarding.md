@@ -19,7 +19,7 @@ image betrays itself the moment the camera moves.
 
 Keep the image flat and **rotate it to face the camera** every frame.
 Super Mario 64 rendered trees and round monsters this way to save
-hardware. Three variants, by how they align:
+hardware. Three variants, by how they align: [1]
 
 | Variant | Alignment | Use |
 | --- | --- | --- |
@@ -29,7 +29,10 @@ hardware. Three variants, by how they align:
 
 Screen-aligned billboards make solid objects look like they hover, hence
 the other two variants. Modern games still billboard distant objects
-(impostors) before switching to real meshes up close.
+(impostors) before switching to real meshes up close. [1, 2]
+
+Unity provides `BillboardRenderer`; Godot exposes billboard alignment
+through its material's `billboard_mode`. [2, 3]
 
 # Trade-offs
 

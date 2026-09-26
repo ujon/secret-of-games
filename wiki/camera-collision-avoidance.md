@@ -15,32 +15,32 @@ A follow rig first computes the shot it wants, but that position may be
 inside a wall, behind a pillar, or outside the level. A point ray can keep
 the camera's center clear while its near-plane corners still cut through
 geometry; simply snapping to the first ray hit also produces visible zoom
-pops at corners and doorways.
+pops at corners and doorways. [1, 2]
 
 # Technique
 
 Treat the requested shot and the collision-safe shot as separate states.
 
 1. **Compute the desired pose without collision.** Keep this untouched so
-   the rig always knows where to return after the obstacle clears.
+   the rig always knows where to return after the obstacle clears. [6]
 2. **Sweep from the target pivot to that pose.** Use a sphere, capsule, or a
    convex proxy for the camera's near-plane footprint rather than a
    zero-width ray. Ignore the player, foliage, and other objects that should
-   not control the camera through a collision mask.
+   not control the camera through a collision mask. [6, 7]
 3. **Stop short of the first blocking surface.** Limit the effective arm
    distance to the hit distance minus a small safety margin without changing
    the desired distance. This spring-arm response keeps the tested
    pivot-to-lens corridor clear; probe important points on the subject
-   separately if they all need line of sight.
+   separately if they all need line of sight. [4, 6, 7]
 4. **Try a low-motion alternative before compressing hard.** A more
    expensive solver can test nearby horizontal rotations, heights, or
    same-distance candidates and prefer the one that preserves composition.
    *Kingdoms of Amalur: Reckoning* rotated its collision beam around walls,
-   then moved forward for what that rotation could not resolve.
+   then moved forward for what that rotation could not resolve. [2, 4]
 5. **Validate actual lens motion and final overlap.** A shoulder swap,
    rotation, teleport, or alternate candidate can move sideways through
    geometry even when the pivot-to-desired corridor is clear. Overlap-test
-   the current pose first because casts may ignore an overlap at their origin.
+   the current pose first because casts may ignore an overlap at their origin. [8]
    Sweep ordinary lateral and outward moves, but cut directly to a validated
    near-side endpoint for a hard inward correction—a sweep starting beyond a
    newly appeared wall would stop on the wrong side. Finally, overlap-test the
@@ -51,11 +51,11 @@ Treat the requested shot and the collision-safe shot as separate states.
    damped. Release slowly after a small clearance threshold or hold time so
    rough collision meshes do not cause chatter. Any grace period before a
    response applies only to optional line-of-sight reframing, never to
-   physical overlap repair.
+   physical overlap repair. [3, 4, 5]
 7. **Override the global rig in spaces that cannot fit it.** A tunnel or
    tiny room should select a shorter authored camera rather than forcing
    the collision solver to fail continuously; see
-   [Interior Camera Zones](interior-camera-zones.md).
+   [Interior Camera Zones](interior-camera-zones.md). [1]
 
 The production *Kingdoms of Amalur: Reckoning* solver cached nearby collision
 points and tested them against a long, thin box called a collision beam. When
@@ -64,7 +64,7 @@ penetration. The beam then appeared to "stick" to a wall and pivot around it
 instead of alternating left and right in a corner. The article also reports
 early experiments with a second, wider predictive volume that could begin
 retracting before the camera reached a narrow doorway; it presents that idea
-as future work, not a confirmed shipped behavior.
+as future work, not a confirmed shipped behavior. [2]
 
 # Examples
 
@@ -123,26 +123,26 @@ achieved_distance = distance(target.camera_pivot, camera.pose.position)
 - **A ray is too thin** — it misses off-axis geometry touched by near-plane
   corners even when the center line is clear.
   Godot's spring-arm tutorial uses a direct-child camera's near-plane pyramid
-  when no custom shape is assigned; its ray fallback is less accurate.
+  when no custom shape is assigned; its ray fallback is less accurate. [7]
 - **Retraction preserves the tested corridor but changes the shot** — the
   character grows on screen, aiming parallax changes, and the camera can end
   up almost inside the avatar. Change shoulder offset or switch rigs below a
   designed minimum distance. Character fading is another fallback, but
   *Tomb Raider* rejected it as immersion-breaking for that game's
-  presentation.
+  presentation. [3]
 - **Sliding can fight player input** — do not auto-yaw while the player is
   actively rotating the camera, and do not cross to the other side of the
   character without preserving the control reference frame.
 - **Every momentary occlusion is not worth camera motion** — *Tomb Raider*
   deliberately allowed selected objects to block sight briefly. If the game
   adds a grace period, use it for visibility or reframing responses, never
-  for the collision constraint that keeps the lens out of geometry.
+  for the collision constraint that keeps the lens out of geometry. [3, 4]
 - **Collision geometry becomes camera authoring data** — protruding proxy
   shapes cause false pushes while missing shapes expose the world shell.
-  Give designers a camera-specific layer and debug view.
+  Give designers a camera-specific layer and debug view. [4, 6]
 - **Richer searches cost more and caches go stale** — cap candidate casts,
   spread point-cloud updates over frames, and handle moving blockers outside
-  a cache designed for mostly static level geometry.
+  a cache designed for mostly static level geometry. [2]
 - **A solver cannot invent space** — if no valid shot exists, reveal the
   subject through the blocker or use an authored interior camera instead.
 

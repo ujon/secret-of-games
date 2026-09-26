@@ -17,6 +17,9 @@ motion — beauty required rules, not just talent.
 
 # Technique
 
+The source Short presents these low-resolution drawing and animation
+conventions. [1]
+
 - **No double pixels** — line segments that clump two-thick read as
   smudges; keep strokes one pixel wide.
 - **No jaggies** — a line's stair-steps must shrink or grow at a

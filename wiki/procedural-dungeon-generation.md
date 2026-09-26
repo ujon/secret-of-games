@@ -23,17 +23,17 @@ Ship the structure, randomize the flesh:
   room per chosen cell, then place stairs, letter-coded monsters, and
   items. Some rooms become mazes instead, carved by random walk with
   backtracking: wander until stuck, back up, branch — the walked path *is*
-  the maze.
+  the maze. [2]
 - **Spelunky** — generate a guaranteed main path first (completable with
   no items), classify rooms by which sides they connect, fill each from
   hand-made templates of that type, then vary with random obstacles and
-  horizontal mirroring. Random every run, even in difficulty.
+  horizontal mirroring. Random every run, even in difficulty. [1]
 - **Dead Cells** — per-zone fixed layout graphs assembled from
   hand-authored tile sets: entrance/exit first, then special rooms, then
-  randomized tiles for the rest.
+  randomized tiles for the rest. [1]
 - **The Binding of Isaac** — grow rooms outward from the start room;
   dead ends become boss/treasure rooms, and the best-connected spot
-  becomes the secret room.
+  becomes the secret room. [1]
 
 # Trade-offs
 

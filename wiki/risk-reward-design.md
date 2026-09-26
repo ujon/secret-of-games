@@ -21,11 +21,11 @@ Offer both at once: **safe but small** versus **risky but rich** — and
 make the risk legible so the gamble is informed:
 
 - *Super Mario* — stomping an enemy risks the touch-damage window but
-  clears the path and pays points; fleeing is always available.
+  clears the path and pays points; fleeing is always available. [1]
 - *Pac-Man* — the power pellet flips ghosts into prey, but the effect
-  expires and can turn greed into death.
+  expires and can turn greed into death. [1]
 - *Bloodborne* (rally) — attacking right after taking damage recovers
-  lost health, but getting hit during the attempt loses more.
+  lost health, but getting hit during the attempt loses more. [1]
 
 The pattern generalizes: optional elite routes, greed-based loot rooms,
 overcharge mechanics, banking-vs-carrying scores.

@@ -18,26 +18,26 @@ possibly see — most of the world, most of the time.
 # Technique
 
 A perspective camera sees a **frustum**: a truncated pyramid bounded by
-the near plane, the far plane, and four side planes. Before drawing:
+the near plane, the far plane, and four side planes. [1] Before drawing:
 
 1. **Wrap each object in a cheap bounding volume** — a sphere or
    axis-aligned box, not the real mesh.
 2. **Test the volume against the six frustum planes** — fully outside any
-   plane means the object can't be visible; skip it entirely.
+   plane means the object can't be visible; skip it entirely. [3]
 3. **Cull hierarchically** — organize the scene spatially (quadtree,
    octree, BVH) so one test can reject a whole branch of objects instead
    of visiting each.
 
 Engines do the per-object pass automatically — Unity, Unreal, and Godot
-all frustum-cull renderers out of the box (see the platform registry) —
-so the craft lies in what the automation can't decide:
+all frustum-cull renderers out of the box (see the platform registry). [1, 3, 4]
+The craft lies in what the automation can't decide:
 
 - **Split huge meshes** — a single combined mesh culls all-or-nothing;
-  chunked geometry culls in pieces.
-- **Layered cull distances** — drop small clutter earlier than landmarks.
+  chunked geometry culls in pieces. [4]
+- **Layered cull distances** — drop small clutter earlier than landmarks. [3]
 - **Pair with occlusion culling** — frustum culling only removes what's
   *outside* the view; dense interiors also need to skip what's hidden
-  *behind* other objects.
+  *behind* other objects. [2, 3]
 
 # Trade-offs
 

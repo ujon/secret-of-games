@@ -5,8 +5,8 @@ description: Generate natural-looking terrain by sampling layered Perlin noise a
 tags: [graphics, procedural-generation, noise, terrain]
 dimensions: [2d, 3d]
 status: stable
-model: claude-fable-5
-timestamp: 2026-07-12T16:55:00Z
+model: gpt-6
+timestamp: 2026-09-26T08:26:19Z
 ---
 
 # Problem
@@ -25,11 +25,12 @@ Perlin noise (Ken Perlin, developed for *Tron* and published at SIGGRAPH
 1985) is **gradient noise**: instead of random values, it places
 pseudo-random *gradient vectors* on an integer lattice and, for any sample
 point, interpolates the dot products of those gradients with the point's
-offsets — using a quintic fade curve (`6t⁵ − 15t⁴ + 10t³`) so first and
-second derivatives stay continuous. The result is a smooth, band-limited
-random field: deterministic for a given seed, continuous everywhere, and
+offsets. [1, 2] Perlin's **2002 improved noise** replaces the original cubic
+interpolant with a quintic fade curve (`6t⁵ − 15t⁴ + 10t³`) so first and
+second derivatives stay continuous at cell boundaries. [2] The result is a
+smooth random field: deterministic for a given seed, continuous, and
 evaluable at any coordinate independently — the technique behind terrain
-generation in games like Minecraft.
+generation in games like Minecraft. [1, 5]
 
 To turn it into terrain:
 
@@ -39,7 +40,7 @@ To turn it into terrain:
 2. **Layer octaves (fBm)** — sum several noise layers, each doubling
    frequency (*lacunarity* ≈ 2) and halving amplitude (*persistence* ≈
    0.5). Low octaves give continents and mountain masses; high octaves add
-   rocks and roughness.
+   rocks and roughness. [1, 5]
 3. **Shape the output** — remap the summed value (curves, `pow`,
    terracing, ridged `|noise|`) to carve plains, cliffs, or ridges, then
    feed it to the engine's terrain/heightfield or a generated mesh.
@@ -60,7 +61,7 @@ height(x, z):
     return total * height_scale
 ```
 
-Engine built-ins (see the platform registry for versions):
+Engine built-ins (see the platform registry for versions): [3–5]
 
 ```text
 Unity   Mathf.PerlinNoise(x, y)                  # ~[0, 1]
@@ -71,11 +72,11 @@ Godot   FastNoiseLite.get_noise_2d(x, y)         # noise_type = TYPE_PERLIN
 # Trade-offs
 
 - **Directional artifacts** — classic Perlin aligns features to the
-  lattice axes; simplex/OpenSimplex-style noise reduces this. Godot's 3.x
-  generation shipped OpenSimplex instead of Perlin for this reason.
+  lattice axes; simplex/OpenSimplex-style noise reduces this. Godot's
+  FastNoiseLite reference explicitly distinguishes the two lattices. [2, 5]
 - **Range gotchas** — implementations disagree: Unity returns roughly
   `[0, 1]` (and documents it may slightly overshoot — clamp before use),
-  Unreal returns `[-1, 1]`. Normalize before mixing octaves or biomes.
+  Unreal returns `[-1, 1]`. Normalize before mixing octaves or biomes. [3, 4]
 - **Tiling period** — permutation-table implementations repeat (typically
   every 256 units); large worlds need rehashing, domain offsets, or tiled
   variants.

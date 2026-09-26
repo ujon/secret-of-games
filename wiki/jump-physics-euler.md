@@ -18,7 +18,7 @@ bends to design intent.
 
 # Technique
 
-Skip the closed-form parabola and **integrate numerically** each frame:
+Skip the closed-form parabola and **integrate numerically** each frame: [1]
 
 ```text
 velocity += gravity * dt    # accumulate acceleration
@@ -31,9 +31,9 @@ designer is free to break physics:
 
 - **Asymmetric gravity** — lighter while rising, heavier while falling
   (Super Mario rises slower than it falls): snappy landings, readable
-  arcs.
+  arcs. [1]
 - **Variable jump height** — cut upward velocity when the button is
-  released; hold time maps to height naturally.
+  released; hold time maps to height naturally. [1]
 
 # Trade-offs
 
