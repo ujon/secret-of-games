@@ -152,6 +152,8 @@ camera.pose = resolve_camera_collision(requested)
 
 # See also
 
+- [Gameplay-Scale Architecture](gameplay-scale-architecture.md)
+
 - [Camera Framing and Look-Ahead](camera-framing-lookahead.md) - authored camera ownership and shot composition.
 - [Camera Collision and Obstacle Avoidance](camera-collision-avoidance.md) - the safety pass retained inside every zone.
 - [Occluder Reveal Effects](occluder-reveal-effects.md) - local wall, roof, and upper-floor rendering choices.

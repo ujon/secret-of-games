@@ -58,3 +58,42 @@ techniques:
   camera-collision-avoidance:
     since: "3.1"
     doc: https://docs.godotengine.org/en/stable/classes/class_springarm3d.html
+  # MultiMesh existed before 3.0; hardware instancing in the GLES3 renderer
+  # arrives with 3.0, replacing the older GLES2 multiple-call path.
+  # https://godotengine.org/article/godots-new-renderer-progress-report-1/
+  gpu-instancing:
+    since: "3.0"
+    doc: https://docs.godotengine.org/en/3.0/classes/class_multimesh.html
+  # ReflectionProbe documented in 3.0 and introduced with its new renderer.
+  cubemap-reflections:
+    since: "3.0"
+    doc: https://docs.godotengine.org/en/3.0/classes/class_reflectionprobe.html
+  # The Godot 3.0 release explicitly announces SSR; renderer restrictions apply.
+  # https://godotengine.org/article/godot-3-0-released/
+  screen-space-reflections:
+    since: "3.0"
+    doc: https://docs.godotengine.org/en/3.0/tutorials/3d/environment_and_post_processing.html
+  # No dedicated built-in planar-reflection component verified; do not register
+  # general custom Viewport rendering as equivalent support.
+  # SkeletonIK introduced in 3.1; renamed SkeletonIK3D in 4.x and
+  # superseded by the maintained IKModifier3D family in 4.6.
+  inverse-kinematics:
+    since: "3.1"
+    doc: https://godotengine.org/article/skeleton-inverse-kinematic/
+  # Variant serialization existed in the 1.0-stable source (File.store_var
+  # and get_var). Modern FileAccess and JSON workflows have newer APIs.
+  save-state-serialization:
+    since: "1.0"
+    doc: https://github.com/godotengine/godot/blob/1.0-stable/core/bind/core_bind.cpp#L1258
+  # Scope: the SpatialMaterial particle frame-grid properties introduced
+  # with the Godot 3 material system, not the first possible animation of
+  # sprites in any Godot version. In 4.x these live on BaseMaterial3D.
+  flipbook-particles:
+    since: "3.0"
+    doc: https://docs.godotengine.org/en/3.0/classes/class_spatialmaterial.html
+  # First support in 3.4: portals and spherical occluders. Godot 4.0 later
+  # introduced the CPU raster occlusion implementation in the current guide.
+  # https://godotengine.org/article/godot-3-4-is-released/
+  occlusion-culling:
+    since: "3.4"
+    doc: https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html

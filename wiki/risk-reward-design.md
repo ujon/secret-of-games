@@ -39,6 +39,9 @@ overcharge mechanics, banking-vs-carrying scores.
 
 # See also
 
+- [Input and Output Randomness](input-output-randomness.md)
+- [Push-Forward Combat](push-forward-combat.md)
+
 - [Pity Timers and PRD](pity-timers-and-prd.md) - bounding the downside when the gamble is randomized.
 - [Dynamic Difficulty Adjustment](dynamic-difficulty-adjustment.md) - retuning challenge when players refuse (or abuse) risk.
 

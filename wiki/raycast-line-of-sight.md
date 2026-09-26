@@ -45,6 +45,8 @@ The same primitive stretches surprisingly far:
 
 # See also
 
+- [Dot Products for Direction Tests](dot-product-tests.md)
+
 - [A* Pathfinding](astar-pathfinding.md) - what the AI does after the ray says "seen".
 - [Camera Collision and Obstacle Avoidance](camera-collision-avoidance.md) - widening a sightline ray into a camera-sized collision sweep.
 - [Hitscan Shooting](hitscan-shooting.md) - the same instant ray, repurposed as a bullet.

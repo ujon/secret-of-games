@@ -38,6 +38,8 @@ textures (Minecraft-style thickened quads) read as stylized, not real.
 
 # See also
 
+- [Volumetric Smoke](volumetric-smoke.md)
+
 - [Perlin Noise Terrain](perlin-noise-terrain.md) - the gradient noise layered with Worley here.
 
 # Citations

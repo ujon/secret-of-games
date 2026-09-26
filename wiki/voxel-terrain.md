@@ -87,6 +87,8 @@ d(x, y, z) = height_field(x, z) - y + carve_edits(x, y, z)
 
 # See also
 
+- [Biome Generation from Noise Fields](biome-generation.md)
+
 - [Perlin Noise Terrain](perlin-noise-terrain.md) - what usually fills the voxel grid before players start editing it.
 - [Frustum Culling](frustum-culling.md) - why chunked geometry culls better than one combined mesh.
 - [Level of Detail](level-of-detail.md) - the per-chunk simplification that makes long view distances possible.

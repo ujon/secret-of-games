@@ -76,6 +76,8 @@ Region graph the designer actually maintains:
 
 # See also
 
+- [Perceived World Scale](perceived-world-scale.md)
+
 - [Camera Framing and Look-Ahead](camera-framing-lookahead.md) - the camera's half of the same job: pointing attention without words.
 - [Risk-Reward Design](risk-reward-design.md) - what makes a baited side route worth taking.
 - [Procedural Dungeon Generation](procedural-dungeon-generation.md) - keeping this structure when the layout isn't hand-placed.

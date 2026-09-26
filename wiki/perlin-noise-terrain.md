@@ -88,6 +88,8 @@ Godot   FastNoiseLite.get_noise_2d(x, y)         # noise_type = TYPE_PERLIN
 
 # See also
 
+- [Biome Generation from Noise Fields](biome-generation.md)
+
 - [Voxel Terrain](voxel-terrain.md) - the volumetric alternative when the world has to overhang, or change while players play.
 - [Worley Noise Skies](worley-noise-skies.md) - the same noise toolkit, layered for clouds instead of ground.
 

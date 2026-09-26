@@ -46,6 +46,9 @@ the renderer pick by how large the object appears:
 
 # See also
 
+- [GPU Instancing](gpu-instancing.md)
+- [Hair Cards](hair-cards.md)
+
 - [Frustum Culling](frustum-culling.md) - removes the invisible; LOD cheapens what remains.
 - [Billboarding](billboarding.md) - the flat impostor that serves as the final LOD level.
 

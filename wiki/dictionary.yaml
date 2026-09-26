@@ -204,7 +204,7 @@ terms:
     definition: >
       A small value derived from data (like a digit sum) used to detect
       tampering or typos when the data is re-entered.
-    see: [password-save-systems]
+    see: [password-save-systems, save-state-serialization, alternating-save-slots]
   ACE:
     expansion: arbitrary code execution
     definition: >
@@ -225,7 +225,15 @@ terms:
     definition: >
       Skipping objects hidden behind other objects — the complement of
       frustum culling, which only removes what's outside the view.
-    see: [frustum-culling]
+    see: [occlusion-culling, frustum-culling]
+  occluder:
+    definition: >
+      Geometry that blocks the camera's view of other objects during an occlusion test.
+    see: [occlusion-culling]
+  occludee:
+    definition: >
+      An object or spatial group whose visibility is tested against occluders.
+    see: [occlusion-culling]
   GC:
     expansion: garbage collection
     definition: >
@@ -237,7 +245,7 @@ terms:
     definition: >
       Swapping a mesh for progressively simpler versions as it shrinks on
       screen, trading detail nobody can see for GPU time.
-    see: [level-of-detail]
+    see: [level-of-detail, hair-cards, guide-hair-simulation]
   pop:
     definition: >
       A visible one-frame switch — an LOD level or impostor swapping in
@@ -247,7 +255,7 @@ terms:
     definition: >
       One cell of a 3D grid — the volumetric counterpart of a pixel —
       holding a material, a density, or gameplay data for that coordinate.
-    see: [voxel-terrain]
+    see: [voxel-terrain, volumetric-smoke]
   chunk:
     definition: >
       A fixed block of adjacent voxels treated as the unit of meshing,
@@ -389,7 +397,7 @@ terms:
       The apparent shift between near and far objects as the viewpoint moves;
       changing camera position can therefore change where an aim ray appears
       relative to the world.
-    see: [billboarding, camera-collision-avoidance, normal-mapping]
+    see: [billboarding, camera-collision-avoidance, normal-mapping, interior-mapping, flipbook-particles]
   near plane:
     definition: >
       The closest rectangular boundary of a camera frustum; geometry that
@@ -431,7 +439,7 @@ terms:
     definition: >
       A modeled connection such as a door, window, or opening between two
       rooms, used to determine when spatial or camera ownership transfers.
-    see: [interior-camera-zones]
+    see: [interior-camera-zones, gameplay-scale-architecture, dot-product-tests]
   hysteresis:
     definition: >
       Using different enter and exit thresholds, or a hold time, so a system
@@ -442,9 +450,200 @@ terms:
     definition: >
       The angular width of the world visible through a camera; changing it
       alters both how much fits on screen and the apparent perspective.
-    see: [interior-camera-zones]
+    see: [interior-camera-zones, gameplay-scale-architecture, dot-product-tests]
   control reference frame:
     definition: >
       The orientation that maps stick directions to world or character
       movement; a camera crossing sides can change what "forward" means.
     see: [interior-camera-zones, camera-collision-avoidance]
+  biome:
+    definition: >
+      A named region type whose rules determine environmental properties such as surface materials, vegetation, ambience, and creature spawning.
+    see: [biome-generation]
+  noise field:
+    definition: >
+      A function assigning a noise value to each position; smoothly varying fields give nearby positions correlated values.
+    see: [biome-generation, perlin-noise-terrain]
+  input randomness:
+    definition: >
+      A random event revealed before the player makes the decision being considered, allowing a response to its outcome.
+    see: [input-output-randomness]
+  output randomness:
+    definition: >
+      A random event that resolves after the player commits to the decision being considered, leaving the outcome uncertain at commitment.
+    see: [input-output-randomness]
+  level metrics:
+    definition: >
+      A project's tested dimensions for spaces and movement, such as doorway widths, ceiling heights, and clearance between obstacles.
+    see: [gameplay-scale-architecture]
+  graybox:
+    definition: >
+      A playable level built with simple placeholder geometry to test scale, movement, and layout before final art.
+    see: [gameplay-scale-architecture]
+  collision capsule:
+    definition: >
+      A simplified collision volume consisting of a cylinder with hemispherical ends, commonly used to represent a character's occupied space.
+    see: [gameplay-scale-architecture]
+  push-forward combat:
+    definition: >
+      Combat design that rewards deliberate engagement and movement, often by tying recovery of health or other resources to attacks.
+    see: [push-forward-combat]
+  Regain:
+    definition: >
+      Bloodborne's mechanic that permits recovery of recently lost health by striking enemies within a short time window.
+    see: [push-forward-combat]
+  dot product:
+    definition: >
+      The sum of corresponding vector-component products; for unit vectors it equals the cosine of their angle.
+    see: [dot-product-tests]
+  unit vector:
+    definition: >
+      A vector with length one, used to represent direction independently of magnitude.
+    see: [dot-product-tests]
+  Lambertian diffuse lighting:
+    definition: >
+      A diffuse reflection model whose directional factor is the nonnegative dot product of the unit surface normal and the direction toward the light.
+    see: [dot-product-tests]
+  serialization:
+    definition: >
+      Converting selected structured data into a storable representation, with deserialization reconstructing that data.
+    see: [save-state-serialization]
+  JSON:
+    expansion: JavaScript Object Notation
+    definition: >
+      A structured text format for objects, arrays, strings, numbers, booleans, and null; engine-specific types need an agreed representation.
+    see: [save-state-serialization]
+  save schema:
+    definition: >
+      The agreed names, types, identities, and relationships of data persisted by a game, including rules for format changes.
+    see: [save-state-serialization]
+  bit packing:
+    definition: >
+      Storing small values in individual bits or bit fields rather than allocating a whole byte or word to each value; eight yes/no flags fit in one byte.
+    see: [save-state-serialization]
+  alternating save slots:
+    definition: >
+      A persistence scheme that writes successive snapshots to different internal slots so a failed write can leave an older valid copy available.
+    see: [alternating-save-slots]
+  generation counter:
+    definition: >
+      A sequence number stored with a snapshot to order valid copies by recency; comparison must account for counter wraparound.
+    see: [alternating-save-slots]
+  decal:
+    definition: >
+      An image applied to an existing surface to add a local mark, such as a bullet impact or crack, without changing the base surface geometry.
+    see: [destruction-state-swaps]
+  strand hair:
+    definition: >
+      Hair represented by individual curves or strands rather than groups painted onto cards; the rendered and simulated strand counts can differ.
+    see: [hair-cards, guide-hair-simulation]
+  animation skeleton:
+    definition: >
+      A hierarchy of joints whose transforms deform attached mesh vertices, including card meshes used to animate a hairstyle.
+    see: [hair-cards, inverse-kinematics]
+  cached simulation:
+    definition: >
+      Motion calculated ahead of time and recorded for playback, reducing the runtime work and variability of a live simulation.
+    see: [destruction-state-swaps]
+  GPU:
+    definition: Graphics processing unit, the processor that executes rendering and other highly parallel work.
+    see: [gpu-instancing]
+  CPU:
+    definition: Central processing unit, the processor that runs game logic and submits work to the graphics processor.
+    see: [gpu-instancing]
+  GPU instancing:
+    definition: Rendering many copies of one mesh with shared material state and per-instance data in a small number of draw calls.
+    see: [gpu-instancing]
+  draw call:
+    definition: A command submitted to the graphics API to render a set of primitives with a specified state.
+    see: [gpu-instancing, planar-reflections]
+  vertex shader:
+    definition: A GPU program that processes mesh vertices, including their positions, before rasterization.
+    see: [gpu-instancing]
+  overdraw:
+    definition: Repeated pixel processing where multiple rendered surfaces cover the same part of the image.
+    see: [gpu-instancing]
+  SSR:
+    definition: Screen-space reflections; tracing reflected directions against camera depth and color data, which cannot by itself supply unseen scene information.
+    see: [screen-space-reflections]
+  cubemap:
+    definition: A directional image stored as six square faces, often used to represent the environment around a capture point.
+    see: [cubemap-reflections, interior-mapping]
+  reflection probe:
+    definition: A placed environment capture and its influence region, used to supply nearby surfaces with approximate reflections.
+    see: [cubemap-reflections]
+  planar reflection:
+    definition: A reflection rendered from a view mirrored across a plane, suitable for flat mirrors or approximately flat water.
+    see: [planar-reflections]
+  depth buffer:
+    definition: A per-pixel record of visible surface depth, used for visibility tests and effects that reconstruct the camera's visible scene.
+    see: [screen-space-reflections]
+  roughness:
+    definition: A material parameter describing small-scale surface variation that broadens and softens specular reflections.
+    see: [cubemap-reflections, screen-space-reflections]
+  deferred rendering:
+    definition: A rendering approach that records visible surface properties in buffers before computing lighting from those buffers.
+    see: [screen-space-reflections]
+  HDRP:
+    definition: High Definition Render Pipeline, Unity's render pipeline for high-fidelity graphics on supported hardware.
+    see: [planar-reflections]
+  interior mapping:
+    definition: >
+      Rendering virtual room surfaces behind a facade by intersecting the
+      view ray with room bounds inside a shader, without room meshes.
+    see: [interior-mapping]
+  hair card:
+    definition: >
+      A textured strip of mesh that represents many individual hair strands
+      as one surface, reducing the geometry needed for a hairstyle.
+    see: [hair-cards]
+  groom:
+    definition: >
+      An authored collection of hair or fur curves that defines the shape,
+      direction, and grouping of strands.
+    see: [hair-cards, guide-hair-simulation]
+  guide strand:
+    definition: >
+      A representative hair curve whose simulated deformation is transferred
+      to other strands so fewer curves need full physics updates.
+    see: [guide-hair-simulation]
+  prefracture:
+    definition: >
+      Dividing an asset into breakable fragments before runtime, leaving the
+      game to decide when fragments detach and how they move.
+    see: [prefractured-destruction]
+  Geometry Collection:
+    definition: >
+      An Unreal Chaos asset containing geometry pieces and a hierarchy that
+      can represent clusters of fragments for destruction simulation.
+    see: [prefractured-destruction]
+  rigid body:
+    definition: >
+      A physics object whose shape stays fixed while its position and
+      orientation change under forces and collisions.
+    see: [prefractured-destruction]
+  flipbook:
+    definition: >
+      A sequence of images stored in a texture sheet and played by selecting
+      successive cells, often to animate a particle without a live simulation.
+    see: [flipbook-particles]
+  texture atlas:
+    definition: >
+      One texture containing multiple image regions addressed with different
+      texture coordinates, including the frames in a particle flipbook.
+    see: [flipbook-particles]
+  density field:
+    definition: >
+      A spatial function or sampled grid describing how much material, such
+      as smoke, occupies each location.
+    see: [volumetric-smoke]
+  ray marching:
+    definition: >
+      Sampling at successive points along a ray to evaluate a field or
+      accumulate a volume's appearance.
+    see: [volumetric-smoke]
+  UV:
+    definition: >
+      The two coordinate axes used to select positions in a texture,
+      independent of the surface's position in the world.
+    see: [flipbook-particles, interior-mapping, normal-mapping]

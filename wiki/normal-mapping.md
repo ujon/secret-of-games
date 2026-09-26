@@ -78,6 +78,8 @@ lit = max(dot(n_w, L), 0.0) * light_color
 
 # See also
 
+- [Dot Products for Direction Tests](dot-product-tests.md)
+
 - [Billboarding](billboarding.md) - the other way to imply geometry you never modeled.
 - [Pixel Art Rules](pixel-art-rules.md) - the hand-authored craft this lighting trick sits on top of.
 - [Level of Detail](level-of-detail.md) - where the high-poly detail goes after it is baked into a map.

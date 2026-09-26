@@ -4,7 +4,7 @@
 #
 # Example:
 #   gpu-instancing:
-#     since: "4.22"
+#     since: "4.0"
 #     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component
 engine: Unreal
 techniques:
@@ -54,3 +54,82 @@ techniques:
   occluder-reveal-effects:
     since: "4.9"
     doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/post-process-materials?application_version=4.27
+  # UE4.0 launch-period users report the component rendering instances in
+  # March 2014. The 4.0 floor is inferred from that date, not a release note.
+  # https://forums.unrealengine.com/t/instanced-static-mesh-incompatible-with-get-hit-result-under-cursor-by-channel/1348
+  # HISM foliage culling specifically introduced in 4.7, not basic instancing.
+  # https://www.unrealengine.com/blog/unreal-engine-47-released?lang=en-US
+  gpu-instancing:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine
+  # Epic's Brian Karis describes local cubemap captures in the UE4
+  # SIGGRAPH 2013 paper, before the first public UE4 release.
+  # https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf
+  cubemap-reflections:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/reflections-captures-in-unreal-engine
+  # Brian Karis describes shipped UE4 SSR on 2014-03-21, during 4.0 launch.
+  # https://forums.unrealengine.com/t/screen-space-reflections-issue/257
+  screen-space-reflections:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/screen-space-reflections-in-unreal-engine
+  # Explicitly introduced in UE4.12 release notes.
+  # https://www.unrealengine.com/blog/unreal-engine-4-12-released
+  planar-reflections:
+    since: "4.12"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/planar-reflections-in-unreal-engine
+  # James Golding documents SaveGame slots during the UE4 launch week:
+  # https://forums.unrealengine.com/t/saving-runtime-variable-changes-via-blueprint/278003
+  # The 4.0 floor covers synchronous slots, not later async additions.
+  save-state-serialization:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/unreal-engine/saving-and-loading-your-game?application_version=4.27
+  # Two Bone IK was already in the prelaunch UE4 workflow discussed by
+  # Epic's Lina in March 2014; 4.0 is the first public UE4 version.
+  # https://forums.unrealengine.com/t/request-montage-float-track-to-control-anim-instance-variables/277216
+  inverse-kinematics:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/two-bone-ik?application_version=4.27
+  # Interior Cubemaps material function introduced in 4.14 release notes.
+  interior-mapping:
+    since: "4.14"
+    doc: https://www.unrealengine.com/blog/unreal-engine-4-14-released
+  # Dedicated Hair shading model introduced in 4.11. Generic textured
+  # meshes predate this; Hair Card Generator arrived experimentally in 5.4.
+  hair-cards:
+    since: "4.11"
+    doc: https://www.unrealengine.com/blog/unreal-engine-4-11-released
+  # Native strand hair with guide attributes and Niagara simulation.
+  guide-hair-simulation:
+    since: "4.24"
+    doc: https://www.unrealengine.com/tech-blog/an-early-look-at-next-generation-real-time-hair-and-fur?lang=en-US
+  # Epic's Nick Darnell documents Create Destructible Mesh/Fracture Mesh
+  # on March 22, 2014, establishing support during the UE4.0 launch.
+  # This initially used APEX; Chaos arrived in 4.23 beta as a later system.
+  prefractured-destruction:
+    since: "4.0"
+    doc: https://forums.unrealengine.com/t/how-do-i-add-destruction-to-a-object/277870
+  # Scope: Chaos cached Geometry Collection playback introduced in 4.23
+  # beta/source-build. Generic visibility swaps and animation predate it;
+  # the complete damaged-state/effects sequence remains project-authored.
+  destruction-state-swaps:
+    since: "4.23"
+    doc: https://www2.unrealengine.com/blog/unreal-engine-4-23-released
+  # Cascade SubUV playback verified during UE4.0 launch by an Epic staff
+  # reproduction dated March 26, 2014:
+  # https://forums.unrealengine.com/t/particles-subuv-interpolation-method-random/278508/2
+  # Niagara's Flipbook Baker is later (5.0); this floor covers playback.
+  flipbook-particles:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/unreal-engine/subuv-modules?application_version=4.27
+  # Niagara Fluids' introduction is explicitly identified in 5.1 notes.
+  # This provides grid smoke; gameplay-specific interaction requires logic.
+  volumetric-smoke:
+    since: "5.0"
+    doc: https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-5.1-release-notes?application_version=5.1
+  # Epic staff identify existing latent occlusion queries before UE4 launch:
+  # https://forums.unrealengine.com/t/extending-the-level-build-system/275862
+  # This floor covers queries, not later HZB or renderer-specific variants.
+  occlusion-culling:
+    since: "4.0"
+    doc: https://dev.epicgames.com/documentation/en-us/unreal-engine/visibility-and-occlusion-culling-in-unreal-engine

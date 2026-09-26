@@ -40,6 +40,8 @@ Constrain randomness so the worst cases can't occur:
 
 # See also
 
+- [Input and Output Randomness](input-output-randomness.md)
+
 - [PRNG Seed Manipulation](prng-seed-manipulation.md) - what happens when players attack the randomness itself.
 - [Risk-Reward Design](risk-reward-design.md) - the gambles these systems keep palatable.
 

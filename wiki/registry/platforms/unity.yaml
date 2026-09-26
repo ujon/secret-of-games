@@ -4,7 +4,7 @@
 #
 # Example:
 #   gpu-instancing:
-#     since: "2018.1"
+#     since: "5.4"
 #     doc: https://docs.unity3d.com/Manual/GPUInstancing.html
 engine: Unity
 techniques:
@@ -63,3 +63,60 @@ techniques:
   camera-collision-avoidance:
     since: "2017.1"
     doc: https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/CinemachineColliderConfiner.html
+  # Introduced in Unity 5.4 release notes; hardware and shader restrictions apply.
+  # Evidence https://unity.com/releases/editor/whats-new/5.4.0f3
+  gpu-instancing:
+    since: "5.4"
+    doc: https://docs.unity3d.com/540/Documentation/Manual/GPUInstancing.html
+  # ReflectionProbe introduced in Unity 5.0; manual cubemap techniques predate it.
+  # Evidence https://unity.com/releases/editor/whats-new/5.0.0f4
+  cubemap-reflections:
+    since: "5.0"
+    doc: https://docs.unity3d.com/Manual/class-ReflectionProbe.html
+  # Unity-provided Post-processing Stack effect, present in the 5.6 archive.
+  # The 2017.2 manual explicitly marks it New in Unity 5.6:
+  # https://docs.unity3d.com/kr/2017.2/Manual/PostProcessing-ScreenSpaceReflection.html
+  # This original implementation requires deferred rendering.
+  screen-space-reflections:
+    since: "5.6"
+    doc: https://docs.unity3d.com/560/Documentation/Manual/PostProcessing-ScreenSpaceReflection.html
+  # HDRP component only, introduced in the 2018.3 preview workflow; the
+  # release post recommends HDRP package 4.6.0. Earlier custom mirrors predate it.
+  # Evidence https://unity.com/blog/technology/introducing-unity-2018-3
+  planar-reflections:
+    since: "2018.3"
+    doc: https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@17.0/manual/Planar-Reflection-Probe.html
+  # Mecanim humanoid IK introduced in 4.0 (Pro-only initially).
+  inverse-kinematics:
+    since: "4.0"
+    doc: https://docs.unity3d.com/400/Documentation/Manual/InverseKinematics.html
+  # JsonUtility introduced in 5.3; this is serialization support, not a
+  # complete save system. Earlier Unity persistence methods predate it.
+  save-state-serialization:
+    since: "5.3"
+    doc: https://docs.unity3d.com/530/Documentation/Manual/JSONSerialization.html
+  # HDRP Hair Master Node, introduced in package 6.0.0-preview and announced
+  # with Unity 2019.1; this dates the dedicated shader, not ordinary textured
+  # card meshes, which can be authored in earlier engines.
+  # Evidence https://unity.com/blog/engine-platform/introducing-unity-2019-1
+  # https://docs.unity.cn/Packages/com.unity.render-pipelines.high-definition@7.1/changelog/CHANGELOG.html
+  hair-cards:
+    since: "2019.1"
+    doc: https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@10.5/manual/Master-Node-Hair.html
+  # Requires the separately installed Unity Demo Team Hair System package.
+  # Its initial public 0.9.0-exp.1 release (2022-08-10) requires Unity
+  # 2020.2.0f1+; since is that editor compatibility floor, not a claim that
+  # this package shipped with the editor in 2020. Tagged solver code already
+  # interpolates non-simulated strands through _LODGuideIndex / KInterpolate.
+  # Evidence https://github.com/Unity-Technologies/com.unity.demoteam.hair/blob/master/CHANGELOG.md
+  # https://github.com/Unity-Technologies/com.unity.demoteam.hair/blob/0.9.0-exp.1/Runtime/HairSimComputeSolver.compute
+  guide-hair-simulation:
+    since: "2020.2"
+    doc: https://github.com/Unity-Technologies/com.unity.demoteam.hair/blob/0.9.0-exp.1/README.md
+  # Scope: Umbra integration introduced in Unity 3.0. An earlier separate
+  # Unity iPhone branch had a different occlusion system; this is not the
+  # first-ever implementation across all historical Unity products.
+  # https://www.globenewswire.com/news-release/2010/09/27/1251895/0/en/Unity-Technologies-Delivers-Unity-3.html
+  occlusion-culling:
+    since: "3.0"
+    doc: https://docs.unity3d.com/Manual/OcclusionCulling.html

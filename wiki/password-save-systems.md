@@ -41,6 +41,8 @@ start:
 
 # See also
 
+- [Save-State Serialization](save-state-serialization.md)
+
 - [Arbitrary Code Execution in Classic Games](arbitrary-code-execution.md) - the same era's memory internals, adversarially explored.
 - [PRNG Seed Manipulation](prng-seed-manipulation.md) - another case of players decoding a game's hidden state.
 
